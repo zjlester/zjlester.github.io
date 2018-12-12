@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>信息技术教育应用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="推介优秀教育软件与资源，分享技术应用技法">
+<meta name="keywords" content="信息技术,教育技术学,移动学习,信息化教学,智慧教育">
+<meta property="og:type" content="website">
+<meta property="og:title" content="信息技术教育应用">
+<meta property="og:url" content="http://zjlester.github.io/page/17/index.html">
+<meta property="og:site_name" content="信息技术教育应用">
+<meta property="og:description" content="推介优秀教育软件与资源，分享技术应用技法">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="信息技术教育应用">
+<meta name="twitter:description" content="推介优秀教育软件与资源，分享技术应用技法">
+  
+    <link rel="alternate" href="/atom.xml" title="信息技术教育应用" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">信息技术教育应用</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">推介优秀教育软件与资源，分享技术应用技法</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zjlester.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-googlemapinactionscript" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/googlemapinactionscript/" class="article-date">
+  <time datetime="2014-11-02T12:09:40.000Z" itemprop="datePublished">2014-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工作室动态/">工作室动态</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/googlemapinactionscript/">Flash中利用ActionScript调用Google Map</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>看到一个Flash作品中使用Google Maps，也想自己试一下，发现Google Maps 其实也是有For Flash的组件的，所以真正做起来还是比较简单的，记录了一下，主要步骤如下：</p>
+<h3 id="下载Google-Maps-API-for-Flash"><a href="#下载Google-Maps-API-for-Flash" class="headerlink" title="下载Google Maps API for Flash"></a>下载Google Maps API for Flash</h3><ol>
+<li>地址是：<a href="http://maps.googleapis.com/maps/flash/release/sdk.zip" target="_blank" rel="noopener">http://maps.googleapis.com/maps/flash/release/sdk.zip</a>。下载解压后有两个SWC，名为“map_1_20.swc”用于Flash Professional，名为“map_flex_1_20.swc”的用于Flex。</li>
+<li>载完毕之后将它们复制到Flash的Components目录，为便于管理，还是在下面建一个Google目录比较好。 在Win7中，Components目录位于：C:\Users\Administrator\AppData\Local\Adobe\Flash CS5\zh_CN\Configuration\Components，用户名与语言不同，路径中相应的目录名会有变化；</li>
+</ol>
+<h3 id="申请Google-Maps-API-Key"><a href="#申请Google-Maps-API-Key" class="headerlink" title="申请Google Maps API Key"></a>申请Google Maps API Key</h3><ol>
+<li>填写Google Maps API的申请表单，地址在<a href="http://code.google.com/apis/maps/signup.html" target="_blank" rel="noopener">http://code.google.com/apis/maps/signup.html</a>;</li>
+<li>在申请KEY时需要填写一个你最终发布SWF文件的域名，这是比较关键的，申请后，记住你的Key代码（下面要用到）</li>
+</ol>
+<h3 id="创建使用环境"><a href="#创建使用环境" class="headerlink" title="创建使用环境"></a>创建使用环境</h3><p>在Flash中新建一个文档，此时在组件框中会看到多出来一个名为Google的文件夹，将里面的Google Maps Library拖至舞台，舞台上会呈现一个蓝框。</p>
+<h3 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a>编写代码</h3><ol>
+<li>创建一个新层用来添加ActionScript代码，在需要添加代码的地方，插入关键帧，按F9进入脚本编写窗口；</li>
+<li><p>示例参考代码如下： //调用类 import com.google.maps.LatLng; import com.google.maps.Map; import com.google.maps.MapEvent; import com.google.maps.MapType;</p>
+<p>var map:Map = new Map(); map.key = “申请到的KEY”; map.sensor = “true”; map.setSize(new Point(stage.stageWidth, stage.stageHeight)); map.addEventListener(MapEvent.MAP_READY, onMapReady);this.addChild(map); function onMapReady(event:Event):void { map.setCenter(new LatLng(29.137243,119.640899), 14, MapType.NORMAL_MAP_TYPE);}</p>
+</li>
+</ol>
+<p>最终显示的效果如图所示，这里地图中心的坐标（ 29.137243,119.640899）其实是ZNU正校门进去的那个环路的圆心，要获取一个地方的坐标有一个比较简便的方法，就是在Google Maps上选中那个点，选择右键菜单中的“Where is here”。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/11/googlemapinactionscript/" data-id="cjpjyn9fr007pzavjjieyqwzv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ActionScript/">ActionScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flash/">Flash</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-howigradeassignments" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/howigradeassignments/" class="article-date">
+  <time datetime="2014-11-02T11:58:05.000Z" itemprop="datePublished">2014-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂项其它/">杂项其它</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/howigradeassignments/">致学生：成绩是怎么炼成的</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：本文原始发表于百度空间，回答了一下修读我课程学生关心的问题，我估计相关的问题以后一样会有学生关心，所以特定也转发到这里。</p>
+<p>首先感谢小谢同学给予我这个题目的灵感，这也显得我有点向标题党亦步亦趋了。实际上一直以来有这样的想法，想把我对高校课程评价的处理方式向大家做一说明，同时也征求大家的建议。这里只想解答几个大家比较关心的问题。</p>
+<h3 id="问题一：真的是“信春哥，得永生。选LEO，得低分？”"><a href="#问题一：真的是“信春哥，得永生。选LEO，得低分？”" class="headerlink" title="问题一：真的是“信春哥，得永生。选LEO，得低分？”"></a>问题一：真的是“信春哥，得永生。选LEO，得低分？”</h3><p>回答： 从课程的平均情况来看，不是这样的。在这个问题上，用图来说话，下图是本人这个学期任教的七个教学班的成绩统计图。 <a href="http://www.ilester.net/wp-content/uploads/2014/11/course_statistics.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2014/11/course_statistics-620x264.png" alt="课程成绩统计表"></a></p>
+<pre><code>可以看到，总体上得分是不低的。你可能注意到了两个问题，一是90分以上的不多，二是4511，4512，4752中不及格的很多，两个问题可以用同一个答案来回答，在我的课程中都采用过程性评价，临时抱佛脚者得不到高分，经常旷课平时作业不交者只能重修。
+
+另外，需要说明一下，不同的课程在评分上还是有点差异，我印象中专业课《人类学习与认知》得分的确总体偏低，像《高级课件制作》、《Flash教学资源设计》只要按部就班，认真做作业（包括平时的和课程总结的），高分较有保障。
+</code></pre><h3 id="问题二：那这个作业都是你打分的，“一点依据也没有”-“会有很大的主观性”。"><a href="#问题二：那这个作业都是你打分的，“一点依据也没有”-“会有很大的主观性”。" class="headerlink" title="问题二：那这个作业都是你打分的，“一点依据也没有”/“会有很大的主观性”。"></a>问题二：那这个作业都是你打分的，“一点依据也没有”/“会有很大的主观性”。</h3><p>解答： 这个问题上，还是继续先放一个图，这是今年《Flash教学资源设计》课程的成绩核算表，其余的6门课也是通过同样的表格核算出来的。 <a href="http://www.ilester.net/wp-content/uploads/2014/11/scores.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2014/11/scores-620x264.png" alt="课程成绩分列计算"></a></p>
+<pre><code>（涉及隐私问题，我将学号做了一个+rand()*10000，然后排序的处理，也就是说上面的列表是无序的，不用对去号入座）
+也就是说，课程要求递交的每项作业都会有评分，都会按约定的评价方式折算总评成绩。所以，依据是有的。
+那么主观性的问题如何避免？我的想法是，首先作为老师自己总会力求客观，相信我们这个群体，更何况现在学校里，教师基本可算是最弱势的群体，有大量的条条框框约束着，我等不敢造次；其次，在技术类问题中，我每年都有征召助教团队，由修过此课程的往届本科和研究生担任，并且会约定打分的规则、分数段的分布情况，同时会安排对他们的培训，待几个人的评分一致才让上岗，最终，一个教学班会安排2-3人不等的助教，这里所看的每项作业成绩，实际上都是教学团队打分后取的平均分。
+要说明的是4752，今年首次开班，所以不请助教，但在最终成绩评定时还是请了2个本专业的学生评分做参考，所以最终的成绩实际上也是综合了三个人的意见。
+</code></pre><h3 id="问题三：那应该在课程的一开始就告诉大家这样的做法吧？"><a href="#问题三：那应该在课程的一开始就告诉大家这样的做法吧？" class="headerlink" title="问题三：那应该在课程的一开始就告诉大家这样的做法吧？"></a>问题三：那应该在课程的一开始就告诉大家这样的做法吧？</h3><p>解答： 你的建议很好，本人也是这么做的，并且如果有调整的话，会在课堂上不止一次加以说明。如果你一次也没有听到，我只能说：”您的身体或是灵魂，必有一个在缺课“。 在1501、1502、1510、1511、4511、4512这些课中，因为已经有多年的积累，课程已经十分完善，在学习平台上也有明确的显示，并且在第一讲中都会花一整节课讲授规则、示例，以及作品上传方法等基本问题。见下图。</p>
+<p><a href="http://www.ilester.net/wp-content/uploads/2014/11/rules.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2014/11/rules-620x264.png" alt="rules"></a></p>
+<pre><code>在课程空间点开上述的链接，你会看到更具体的说明：
+</code></pre><h3 id="问题四：好吧，我的出发点也是为了课程建设得更好。"><a href="#问题四：好吧，我的出发点也是为了课程建设得更好。" class="headerlink" title="问题四：好吧，我的出发点也是为了课程建设得更好。"></a>问题四：好吧，我的出发点也是为了课程建设得更好。</h3><p>解答： 好多克油。实际上，在本人任教的每一个教学班，最后都会请学生填写一个满意度调查，并会邀请修课同学对后续教学班的同学提建议，教学团队也会按照这些建议进行课程内容及教学方式的改进，以下是往届同学对4511课程同学的建议（部分，按顺序截取，全文见学习平台）：</p>
+<pre><code>2011-10-24 20:02:14
+我觉得在学习flash这门课时，适当的笔记是需要的，好记性不如烂笔头嘛！！同时不懂的应该主动马上去问老师，这样会更加又助于自己的学习。
+2011-10-24 20:02:01
+1.能否在机房给更多的时间做作业。回去做比较麻烦。基本满意教学幽默，清楚。
+2.如果不认真学会跟不上，希望后来的同学们最好不要开小差
+2011-10-24 20:01:40
+我是第一次接触flash，所以对待flash不是很了解，对于老师您的这门课我还是非常肯定的，确实，我学习到了很多知识。但是我想说的是，对于我这样的新手，我认为您上课的速度有点快，我不太能跟上节奏，而且很多知识只说一遍，所以接受起来有点困难。所以每一次我都要问身边的同学才能完成任务~~
+2011-10-24 20:01:30
+学习阮老师的课需要自己多动手
+2011-10-24 20:01:27
+能增加学习时间，希望老师能够教授更多的知识！
+2011-10-24 20:01:21
+此课程 对于不太懂电脑的学生来说学起来有些吃力，课堂上不会的内容一定要当场解决，否则课后作业很难完成。尽可能的多想多练多复习 ，做出一些自己喜欢的FLASH。
+2011-10-24 20:01:20
+我觉得这堂课最好还是能记下笔记，要不然课上会的东西可能一下课就想不起来了。有了笔记可以帮助回忆，而且尽量记详细些哦。
+2011-10-24 20:01:13
+之前学过高级课件制作 是另外一个老师教的 这学期又修了Flash 感觉完全不一样 说实话这老师教的真得挺好的 只要大家老师一步一步做 打好基础就好了 然后课外再根据自己的兴趣 自行探索一下 相信会有比较大的提高和收获
+2011-10-24 20:01:09
+我觉得可以在网站上加上一些视屏教程，有时候上课的内容忘记时可以方便我们回顾和复习，而不是去找人问，这样就大大节约了我们的时间，至于给同学们的建议，我觉得可闷课老师讲的十分的生动，没有什么基础知识也能学的会，不要觉得计算机很可怕，我以一个过来人来说这门课只要认真听就能学会，当然一些关键的地方最好自己记一下，不然忘记那就惨咯，要是课外能在自己去自学一下那就更加好了
+2011-10-24 20:01:07
+老师很负责任，教学有方，知识技能丰富，能很详尽的讲解和解答疑问，很有耐心，学他的会很有收获哦，不过如果提前能够接触并且稍微学习下flash会更好……
+2011-10-24 20:01:05
+我们电脑里的flah课件不太好用啊，感觉自己电脑上用也很慢，最好还是去图书馆作flash作业 嘿嘿
+
+我个人觉得这样师生互动，教学相长，课程会建设得更好，大家也可以学到有用的东西。否则走马观花，最终留不下什么，多浪费青春。
+</code></pre><h3 id="问题五：听说学校里把学生对教师评价纳入教师年终考核的，您就不担心么？"><a href="#问题五：听说学校里把学生对教师评价纳入教师年终考核的，您就不担心么？" class="headerlink" title="问题五：听说学校里把学生对教师评价纳入教师年终考核的，您就不担心么？"></a>问题五：听说学校里把学生对教师评价纳入教师年终考核的，您就不担心么？</h3><p>解答： 挺担心的。但实际上，我想学生学到了有用的东西，并且成绩也能如实反应他们的努力，相信他们对课程和教师的评价也不会太离谱（至于这样的评价方式是否合理完善，不在此讨论，既定的规则在这里，在允许修改的时间窗口可以提问题，但一旦定在那里，就遵守）。BTW: 去年本人教学业绩是A，年度考核是优秀。在此感谢更位同学的厚爱，也希望你们一如继往支持。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/11/howigradeassignments/" data-id="cjpjyn9ki00mlzavjsothtuvd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/混合式教学/">混合式教学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/课程教学/">课程教学</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-win1404-minitool-partition-wizard" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/win1404-minitool-partition-wizard/" class="article-date">
+  <time datetime="2014-11-01T07:28:00.000Z" itemprop="datePublished">2014-11-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教育软件/">教育软件</a>►<a class="article-category-link" href="/categories/教育软件/资源分享/">资源分享</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/win1404-minitool-partition-wizard/">Win004：免费分区管理工具MiniTool Partition Wizard</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h3><p>在Windows 9x（包括XP)时代，PowerQuest的Partition Magic（俗称”PQ Magic”）可称为最常用的分区管理与调整工具，但近日在Windows 7/8系统中却发现PQ Magic无法再实现这一功能。一经搜索，发现另有一款分区管理软件可以在Win7中较好地代替PQ，它的名字叫MiniTool Partition Wizard，官方版本包括家庭版、专业版、服务器版、企业版以及技术人员版，其中家庭版是完全免费的，支持的系统包括32和64位的Windows 2000、XP、vista和Windows 7、8，主要功能包括：调整分区大小， 复制分区， 创建分区， 删除分区， 格式化分区， 分区转换， 探索分区， 隐藏分区， 更改驱动器号， 设置活动分区， 分区恢复，等。</p>
+<p>此外，专业版提供了更高级的磁盘分区管理选项，服务器版还支持Windows Server 2003/2008等系统，而企业版则提供了面向企业环境的分区管理方案。对于大多数用户而言，免费的家庭版足够使用了。</p>
+<h3 id="获取与使用"><a href="#获取与使用" class="headerlink" title="获取与使用"></a>获取与使用</h3><ol>
+<li>下载： 首先可以到Mini Tool官方站点下载Partition Wizard，家庭版的下载地址是：<a href="http://www.partitionwizard.com/free-partition-manager.html。" target="_blank" rel="noopener">http://www.partitionwizard.com/free-partition-manager.html。</a></li>
+<li>执行： 下载所得的可执行文件即可进入程序的安装向导，一路点击“Next”即可。</li>
+<li>运行： 启动MiniTool Partition Wizard Home Edition，界面似曾相识，实际上分区管理软件的操作界面均大同小异。 <a href="http://www.ilester.net/wp-content/uploads/2014/11/1347f3d39b58e29aa8ec9a3d.jpg.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2014/11/1347f3d39b58e29aa8ec9a3d.jpg-620x264.png" alt="Minitools_Partition_Wizard"></a> 上方的磁盘分区图示中可以看到主要的NTFS、FAT、Linux Swap等分区格式可以正常地探知与识别，但是遗憾的是我硬盘上的Linux Ext4分区只是被识别为其它（Other）分区，但我想这对大多数用户来说，不会产生影响。</li>
+<li>操作 管理分区时，先在磁盘图示中选择需要调整的分区，然后点击相应的图标（或右键菜单选项）即可，等所有的操作设置完毕，运行“General”/“Apply the Change”或者按CTRL+A即可执行设置策略。</li>
+</ol>
+<p>说明：</p>
+<ul>
+<li>涉及到系统盘的分区，大多需要重启系统，并在加载操作系统前以批处理命令的方式自动执行，不要担心，这些操作都是自动，但一定得有耐心，不要自行强制关机中止。</li>
+<li>MiniTool还提供了这一软件的可启动光盘和可启动闪盘（U盘）的镜像，你也可以烧制内置这一分区调整工具的光盘或制作U盘，这样对于分区调整应该会更加方便（当然话说回来，既然用到可启动盘，那么Pqmagic甚至一些dos工具也是一样可以实现分区调整功能的）。<ul>
+<li>启动光盘镜像下载站点：<a href="http://www.partitionwizard.com/partition-wizard-bootable-cd.html" target="_blank" rel="noopener">http://www.partitionwizard.com/partition-wizard-bootable-cd.html</a>。</li>
+<li>U盘启动盘制作工具：<a href="http://www.partitionwizard.com/bootable-flash-drive.html" target="_blank" rel="noopener">http://www.partitionwizard.com/bootable-flash-drive.html</a>。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/11/win1404-minitool-partition-wizard/" data-id="cjpjyn9iw00fmzavjwwa26vcc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-freescreenrecorder" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/freescreenrecorder/" class="article-date">
+  <time datetime="2014-10-29T23:05:18.000Z" itemprop="datePublished">2014-10-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教育软件/">教育软件</a>►<a class="article-category-link" href="/categories/教育软件/资源分享/">资源分享</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/freescreenrecorder/">Win003：5款免费的屏幕录制软件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在介绍屏幕录制类微课制作的文章中，我推荐了Camtasia Studio（事实上，这也是我用过的屏幕录制类软件功能最强大的一款），但是要注意的是Camtasia Studio是收费的，并且价格并不便宜，尽管很多网友都有方法来“免费”的使用……呃，你懂的。但实际上也有不少免费的录屏软件，可以用来当作这款软件的替代品，在这里推介几款：</p>
+<ol>
+<li>CamStudio CamStudio是一款Windows开源、免费的屏幕录制软件，界面简朴，操作简单。下载地址：<a href="http://icdn.camstudiofiles.org/CamStudioSetup_v2.7.2.exe" target="_blank" rel="noopener">http://icdn.camstudiofiles.org/CamStudioSetup_v2.7.2.exe</a>，另外可以选择安装<a href="https://sourceforge.net/projects/camstudio/files/legacy/CamStudioCodec_1.5_Setup.exe/download?accel_key=54%3A1414622644%3Ahttp%253A//camstudio.org/%3A747cffd5%24b990219b90e60906bed807c2286bc4b0dfcb72b8&amp;click_id=157717b8-5fbd-11e4-ae4b-0200ac1d1d9f&amp;source=accel" target="_blank" rel="noopener">无损编码器</a>.</li>
+<li>EZVid EZvid号称是最易用的屏幕录制与视频编辑软件（反正大家都这么自我评价的）。支持Windows XP到最新的8.1，下载地址是：<a href="https://d8iqr6rrckgw5.cloudfront.net/download/ezvid0982d.exe" target="_blank" rel="noopener">https://d8iqr6rrckgw5.cloudfront.net/download/ezvid0982d.exe</a>.</li>
+<li>Jing 这个软件的名字听起来很中国化，出品厂商是和Camtasia Studio同家的TechSmith，专业公司的实力值得依赖。它除了可以录屏，也可以用于截取静态图片，同时也支持快速将其上传至TechSmith的网站共享，限制是视频只能在5分钟以内，地址：<a href="http://www.techsmith.com/download/jing/" target="_blank" rel="noopener">http://www.techsmith.com/download/jing/</a>，分别有For Win和For Mac版本.</li>
+<li>Webinaria Webinaria是一款开源的录屏软件，支持Flash视频导出（FLV），软件托管在SourceForge，可以单击<a href="http://sourceforge.net/project/showfiles.php?group_id=233873&amp;package_id=283821" target="_blank" rel="noopener">此处</a>下载。你也可以访问它的官方站点了解更多信息以及网友的分享案例：<a href="http://www.webinaria.com" target="_blank" rel="noopener">http://www.webinaria.com</a>.</li>
+<li>Screenr Screenr是一款在浏览器中即可以运行的录屏软件，这意味着你不需要安装软件，也不需要介意你使用的操作系统（甚至在iPhone上也可以运行），而它背后的厂商，则是大名鼎鼎的Articulate。使用地址：<a href="https://www.screenr.com/" target="_blank" rel="noopener">https://www.screenr.com/</a>。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/10/freescreenrecorder/" data-id="cjpjyn9fm007dzavjj3oemy76" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微课/">微课</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教学软件/">教学软件</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-win-e8-bd-af-e4-bb-b6-e6-8e-a8-e8-8d-901402-ef-bc-9aairplayer-ef-bc-88-e8-8b-b9-e6-9e-9c-e5-bd-95-e5-b1-8f-e5-a4-a7-e5-b8-88-ef-bc-89" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/win-e8-bd-af-e4-bb-b6-e6-8e-a8-e8-8d-901402-ef-bc-9aairplayer-ef-bc-88-e8-8b-b9-e6-9e-9c-e5-bd-95-e5-b1-8f-e5-a4-a7-e5-b8-88-ef-bc-89/" class="article-date">
+  <time datetime="2014-10-29T09:41:17.000Z" itemprop="datePublished">2014-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教育软件/">教育软件</a>►<a class="article-category-link" href="/categories/教育软件/资源分享/">资源分享</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/win-e8-bd-af-e4-bb-b6-e6-8e-a8-e8-8d-901402-ef-bc-9aairplayer-ef-bc-88-e8-8b-b9-e6-9e-9c-e5-bd-95-e5-b1-8f-e5-a4-a7-e5-b8-88-ef-bc-89/">Win1402：AirPlayer（苹果录屏大师）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h3><p>AirPlayer（苹果录屏大师）是国内软件厂商iTools推出的一个AirPlay接收器模拟软件，简单地说，它可以在你的电脑上虚拟出一个Apple TV来，这样当你使用iOS设备的时候，可以借助AirPlay功能，将设备上的视频与音频信号通过无线局域网传输到电脑屏幕上，如果你的电脑也外接了显示器，这样也间接地实现了无线投影的效果了。</p>
+<p>尽管在AirPlay模拟软件中，老牌的Reflector、AirServer功能上也许更加强大一点。但是AirPlayer光凭全中文界面、免费授权这两个优点就足够受到中文用户的青睐了。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ol>
+<li>从本页的下载地址处，或者百度搜索获取此软件，并安装到你的Windows操作系统上，运行此程序；</li>
+<li>将你的电脑与要使用的终端连接到同一个局域网上，这里可能会有几种情况，比如可以将电脑的无线网卡和iOS设备连接到同一个WIFI热点；如果你的无线路由器同时拥有有线接口，可以用网线连接到路由器，同时将iOS设备连接到热点中。如果你的环境没有无线热点，你也可以利用《<a href="http://www.ilester.net/archives/42" target="_blank" rel="noopener">移动教育应用系列05：移动演示教学的条件</a>》一文中介绍的方法，利用笔记本的无线网卡或是随身WIFI之类的硬件来创建一个虚拟WIFI热点。</li>
+<li>在iOS设备的状态栏中（从屏幕底端向上划动即可出现），如果前面的操作正常，此时在“AirDrop”附件应该会出现一个“AirPlay”选项，选择它，会出现一个信号输出选项，选择AirPlayer即可。要说明的是，默认是内容投影模式，如果你需要镜像投影画面，那么请打开“镜像”选项。</li>
+<li>Enjoy。</li>
+</ol>
+<p>说明： 在Windows下，请确保网络防火墙没有屏蔽AirPlayer软件的端口。如果使用的是Windows 7或是以上版本，比较简单的方法就是将电脑连接的这个网络设置为“家庭网络”或是“工作网络”。</p>
+<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><ul>
+<li>下载地址：<a href="http://pan.baidu.com/s/1i37nsLB" target="_blank" rel="noopener">http://pan.baidu.com/s/1i37nsLB</a>（百度云盘）</li>
+<li>官方网站：<a href="http://pro.itools.cn/airplayer" target="_blank" rel="noopener">http://pro.itools.cn/airplayer</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/10/win-e8-bd-af-e4-bb-b6-e6-8e-a8-e8-8d-901402-ef-bc-9aairplayer-ef-bc-88-e8-8b-b9-e6-9e-9c-e5-bd-95-e5-b1-8f-e5-a4-a7-e5-b8-88-ef-bc-89/" data-id="cjpjyn9iu00fjzavjn319nnxu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动学习/">移动学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-micro-lecture-flowchart" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/micro-lecture-flowchart/" class="article-date">
+  <time datetime="2014-10-29T02:15:55.000Z" itemprop="datePublished">2014-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂项其它/">杂项其它</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/micro-lecture-flowchart/">获奖微课案例：《算法及其实现》</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近几次和朋友们交流微课制作与应用方面的问题时，被要求推荐一些微课案例，所以接下去我也会抽空将自己指导学生及平时收藏的一些优秀微课案例分享出来，供大家参考借鉴。这一篇要向大家推荐的中国大学生计算机大赛微课组二等奖的获奖作品《流程图》。</p>
+<ul>
+<li>作品名称：《流程图》</li>
+<li>作者团队：丁一璐、楼一丹、李斐莹（浙江师范大学教育技术学2011级学生）</li>
+<li>指导团队：阮高峰</li>
+<li>主要内容： 介绍流程图中常用图示，以及用流程图表示算法的方法。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/10/micro-lecture-flowchart/" data-id="cjpjyn9hg00bszavjcgudlqfo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微课/">微课</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/案例/">案例</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-camtasia-studio-7-1" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/camtasia-studio-7-1/" class="article-date">
+  <time datetime="2014-10-24T01:03:24.000Z" itemprop="datePublished">2014-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教育软件/">教育软件</a>►<a class="article-category-link" href="/categories/教育软件/资源分享/">资源分享</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/camtasia-studio-7-1/">Camtasia Studio 7.1绿色汉化版</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://ww1.sinaimg.cn/large/4acc22aagw1fbtz8qxy1tj20q20inn11.jpg" alt=""></p>
+<h3 id="一、软件功能"><a href="#一、软件功能" class="headerlink" title="一、软件功能"></a>一、软件功能</h3><p>Camtasia Studio 是美国 TechSmith 公司出品的屏幕录像和编辑的软件套装。顺便说一下，TechSmith长年来一直关注此类软件的研发，可以说是这一领域的领军者，在静态图像捕捉方面的另一个优秀软件SnagIt也是他家的产品。</p>
+<p>Camtasia Studio内部有多个组件，其中与微课制作最主要的是两个，即屏幕录制器和视频编辑器，而软件在工作流程上又比较好地将两个组件衔接在一起，比如在屏幕录制器中完成屏幕实录之后，可以直接导入编辑器编辑，而在编辑器界面中也有快捷的启动屏幕录制的按钮。</p>
+<h4 id="1-屏幕录制器"><a href="#1-屏幕录制器" class="headerlink" title="1.屏幕录制器"></a>1.屏幕录制器</h4><p>Camtasia 录像器能在任何颜色模式下轻松地记录屏幕动作，包括光标的运动、菜单的选择、弹出窗口、层叠窗口、打字和其他在屏幕上看得见的所有内容。除了录制屏幕，Camtasia Record还能够允许你在录制的时候在屏幕上画图和添加效果，以便标记出想要录制的重点内容。 Camtasia Studio还会为PowerPoint添加一个快速启动插件，借助PPT插件可以快速的录制ppt视频并将视频转化为交互式录像放到网页上面，也可转化为绝大部分的视频格式，如avi、swf等。此外，录制器还将同时录制声音和外部摄像机的画面，因此来制作三分屏式的微课也会十分方便。</p>
+<h4 id="2-编辑器"><a href="#2-编辑器" class="headerlink" title="2.编辑器"></a>2.编辑器</h4><p>Camtasia Studio的编辑器提供了一个比较便捷易用的视频编辑窗口，主要的功能包括：剪切一段选区、隐藏或显示部分视频、分割视频剪辑、扩展视频帧以便适应声音、改变剪辑或者帧的持续时间、调整剪辑速度以便作出快进或者慢放效果；添加标题、字幕、画面标注图文等；添加测验试题、分段标记等。</p>
+<h3 id="二、软件获取"><a href="#二、软件获取" class="headerlink" title="二、软件获取"></a>二、软件获取</h3><p>Camtasia Studio 7.1绿色汉化版：<a href="https://cloud.zjnu.edu.cn/share/f8b5e2ecee47bf5d500d237ad0" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/11/Download.png" alt="Download"></a></p>
+<p>另外可以在Camtasia Studio官网下载最新版本试用版，地址是：<a href="http://www.techsmith.com/download/camtasia/" target="_blank" rel="noopener">http://www.techsmith.com/download/camtasia/</a>。</p>
+<h3 id="三、教程信息"><a href="#三、教程信息" class="headerlink" title="三、教程信息"></a>三、教程信息</h3><p>工作室制作了Camtasia Studio录屏微课制作的系列视频教材，现已发布于“网易云课堂”，有兴趣的老师可以点以下链接了解：<a href="http://study.163.com/course/courseMain.htm?courseId=1029003" target="_blank" rel="noopener">http://study.163.com/course/courseMain.htm?courseId=1029003</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/10/camtasia-studio-7-1/" data-id="cjpjyn9en004ozavj7fwixuvd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Camtasia/">Camtasia</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微课/">微课</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-app-e6-8e-a8-e8-8d-901401-ef-bc-9ashow-me-for-ipad" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/app-e6-8e-a8-e8-8d-901401-ef-bc-9ashow-me-for-ipad/" class="article-date">
+  <time datetime="2014-10-22T02:05:51.000Z" itemprop="datePublished">2014-10-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教育软件/">教育软件</a>►<a class="article-category-link" href="/categories/教育软件/杂项其它/">杂项其它</a>►<a class="article-category-link" href="/categories/教育软件/杂项其它/资源分享/">资源分享</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/app-e6-8e-a8-e8-8d-901401-ef-bc-9ashow-me-for-ipad/">APP1401：Show Me for iPad</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>ShowMe是一款适用于iOS平台的白板软件，免费提供。主要功能及适用情境如下：</p>
+<ul>
+<li>白板应用：方便易用的书写和批注功能，工具简单易用，只有画笔（默认启用）、七色色盘、插入图片、擦除等几个工具，技术门槛几乎为零。如果借助AirPlay无线投影技术，将iPad画面镜像投影至显示设备，就可以代替交互式白板大多数的功能了。</li>
+</ul>
+<p>[caption width=”480” align=”aligncenter”]<img src="http://mmbiz.qpic.cn/mmbiz/7NNtS9qvF0wJoCn7GEbBuwIvI0ok7B8JiaJIX6Ez7LCAO1SmPCKYRgla06ibqAqYEPEjJg9hvbel5ed5254g7qyQ/0" alt="ShowMe"> ShowMe [/caption] <em> 微课录制：内置屏幕录制功能，可以将屏幕实录和语音讲解自动录制，如果你要录制可汗学院式的视频微课，只需要单击一下工具栏中间的红色录制按钮，然后讲解、演示你的教学内容，保存之后就可以将录制的视频上传至ShowMe服务器存储，如果你需要对视频做进一步的编辑处理，可以在电脑端登录下载，再用视频编辑软件加工。 </em> 共享功能：你可以将自己录制的微课分享给同伴，也可以在共享社区使用其他用户录制的微课，不过当前Show Me的主要用户群还是英语用户，所以社区上共享的很多视频微课都是英语的，期待中文用户群不断增大，也许有一天我们也可以在上面找到很多中文教学资源了。此外，高级版本还支持学生管理功能，代替学习管理系统的功能。</p>
+<h3 id="二、获取"><a href="#二、获取" class="headerlink" title="二、获取"></a>二、获取</h3><p>Show Me可以在苹果的AppStore免费下载，如果你使用iPad浏览本站，可以点击此链接获取：<a href="http://itunes.apple.com/gb/app/showme-interactive-whiteboard/id445066279?mt=8#" target="_blank" rel="noopener">http://itunes.apple.com/gb/app/showme-interactive-whiteboard/id445066279?mt=8#</a> ，或者你可以在AppStore中搜索“show me”查询并下载。</p>
+<p>说明一下，Show Me并没有针对iPhone的版本（其实iPhone那样的小屏幕中也不适合做白板操作，6 Plus可以能会好一些），此外也没有Android的版本。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/10/app-e6-8e-a8-e8-8d-901401-ef-bc-9ashow-me-for-ipad/" data-id="cjpjyn9dc001uzavjqihwf5rn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教学软件/">教学软件</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e8-b5-84-e6-ba-90-ef-bc-9a-e6-8e-a8-e8-8d-90-e5-87-a0-e4-b8-aa-e5-b8-b8-e7-94-a8-e7-9a-84-e4-ba-92-e8-81-94-e7-bd-91-e5-9b-be-e5-ba-93" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/e8-b5-84-e6-ba-90-ef-bc-9a-e6-8e-a8-e8-8d-90-e5-87-a0-e4-b8-aa-e5-b8-b8-e7-94-a8-e7-9a-84-e4-ba-92-e8-81-94-e7-bd-91-e5-9b-be-e5-ba-93/" class="article-date">
+  <time datetime="2014-10-20T01:49:57.000Z" itemprop="datePublished">2014-10-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂项其它/">杂项其它</a>►<a class="article-category-link" href="/categories/杂项其它/资源分享/">资源分享</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/e8-b5-84-e6-ba-90-ef-bc-9a-e6-8e-a8-e8-8d-90-e5-87-a0-e4-b8-aa-e5-b8-b8-e7-94-a8-e7-9a-84-e4-ba-92-e8-81-94-e7-bd-91-e5-9b-be-e5-ba-93/">资源：推荐几个常用的互联网图库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>经常有朋友问我平时做课件、做网页的时候，图片、图标从哪里来？其实大多数情况下，使用公共搜索引擎如百度、Bing（Google现在用的真的少了，原因不表了）的图片搜索栏目，但有时候也会借助一些专用的图库，这里推荐几个我经常在使用的。也期待大家给我推荐好的素材站点，我会整理、修订在这个文档中。</p>
+<h3 id="专业图库"><a href="#专业图库" class="headerlink" title="专业图库"></a>专业图库</h3><ul>
+<li><strong>免费数字照片网</strong>：英文站点，老牌站点，其中有不同的频道，当然也包括教育频道。地址是：<a href="http://www.freedigitalphotos.net/" target="_blank" rel="noopener">http://www.freedigitalphotos.net/</a></li>
+<li><strong>Pics4Learning</strong>：T4L是国外一个关注技术教育应用的一个站点，用来分享、交流各种教育信息技术资源以及案例，这是他们的图库站：<a href="http://pics.tech4learning.com/" target="_blank" rel="noopener">http://pics.tech4learning.com/</a></li>
+<li><strong>FreeFoto</strong>:又一个免费的图库，资源还是比较丰富的，地址是：<a href="http://www.freefoto.com" target="_blank" rel="noopener">http://www.freefoto.com</a></li>
+<li><strong>ThinkStock</strong>:说明一下，ThinkStock并不免费，但还是要强烈推荐一下，因为较之别的图片资源站点，它走的是精品化路线，你打开页面看看他们预览图片就可以看到他们的作品大多设计感十足（当然高分辨率图是要付费下载的），所以用作构图参考也挺好的：<a href="http://www.thinkstockphotos.com" target="_blank" rel="noopener">http://www.thinkstockphotos.com</a></li>
+<li><strong>IconFinder</strong>:我是使用频率最高的一个站点，内容顾名思议就是各类图标、插画，很多是免费的，但即使是收费的那些也提供小尺寸、无水印的版本下载，已经算是业界良心了：<a href="https://www.iconfinder.com/" target="_blank" rel="noopener">https://www.iconfinder.com/</a></li>
+<li><strong>昵图网</strong>：国内的一个资源站，资源同样非常丰富，<a href="http://www.nipic.com" target="_blank" rel="noopener">http://www.nipic.com</a></li>
+<li><strong>千图网</strong>：另一个国内图片资源站，地址是：<a href="http://www.58pic.com/" target="_blank" rel="noopener">http://www.58pic.com/</a></li>
+</ul>
+<p>此外也有一些图片分享站点，上面有不少版权开放的免费图片资源，比如曾经的Flickr (<a href="http://www.flickr.com" target="_blank" rel="noopener">http://www.flickr.com</a>，现在不能访问了)，另外一些专题内容，其实在维基百科（<a href="http://www.wikipedia.com" target="_blank" rel="noopener">http://www.wikipedia.com</a>）之类的百科站点上也可以得到高质量的图片，比如信息技术老师上课时总是会提到世界上第一台计算机ENIAC，但它长咋样？问维百就是了.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/10/e8-b5-84-e6-ba-90-ef-bc-9a-e6-8e-a8-e8-8d-90-e5-87-a0-e4-b8-aa-e5-b8-b8-e7-94-a8-e7-9a-84-e4-ba-92-e8-81-94-e7-bd-91-e5-9b-be-e5-ba-93/" data-id="cjpjyn9fa006jzavjkl12xvgv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mac-e4-b8-8b-e5-b8-b8-e7-94-a8-e8-bd-af-e4-bb-b6-e5-88-97-e8-a1-a8" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/mac-e4-b8-8b-e5-b8-b8-e7-94-a8-e8-bd-af-e4-bb-b6-e5-88-97-e8-a1-a8/" class="article-date">
+  <time datetime="2014-10-20T01:19:14.000Z" itemprop="datePublished">2014-10-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂项其它/">杂项其它</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/mac-e4-b8-8b-e5-b8-b8-e7-94-a8-e8-bd-af-e4-bb-b6-e5-88-97-e8-a1-a8/">Mac下常用软件列表</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Mac平台"><a href="#Mac平台" class="headerlink" title="Mac平台"></a>Mac平台</h4><p>以下提到的大多数软件均可以到AppStore下载安装。</p>
+<ol>
+<li>Google Chrome(浏览器)，说明见上</li>
+<li>Sublime Text 2(文本编辑工具)，说明见上</li>
+<li>Evernote(云笔记)，说明见上</li>
+<li>Xmind for Mac（概念图工具），说明见上</li>
+<li>金山快盘（网盘工具），说明见上。</li>
+<li>QQ (即时通讯工具)，说明见上</li>
+<li>iWorks（办公套件） 2013年11月以后购置的Mac OS X设备免费开放了，所以也安装一个，不过功能上似乎是弱了一点，我觉得远不如Office。</li>
+<li>The Unarchiever(解压缩工具) 系统自带的解压缩功能不支持RAR格式，用这款免费软件弥补缺失。在Mac App Store可以下载。</li>
+<li>有道词典 （词典工具） 遇到不认识的单词查一记。</li>
+<li>Office for Mac 2011 微软的Office套件，感觉Mac版的模板更加精致，这不合情理啊。顺便说一句，这套是正版。</li>
+<li>AppZapper(系统工具) Mac下删除程序的方式和Windows不大一样，还是用个专门的软件比较省事。</li>
+<li>VLC (媒体播放软件) 开源免费的媒体播放器，Mac下的射手影音应该也是不错的，但是要收费的。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zjlester.github.io/2014/10/mac-e4-b8-8b-e5-b8-b8-e7-94-a8-e8-bd-af-e4-bb-b6-e5-88-97-e8-a1-a8/" data-id="cjpjyn9h000alzavj8iukabf0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/16/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/18/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于/">关于</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/关于/杂项其它/">杂项其它</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/原创文章/">原创文章</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作室动态/">工作室动态</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/工作室动态/成果展示/">成果展示</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作室动态/最新动向/">最新动向</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作室动态/杂项其它/">杂项其它</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/成果展示/">成果展示</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教育软件/">教育软件</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教育软件/杂项其它/">杂项其它</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教育软件/杂项其它/资源分享/">资源分享</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/教育软件/资源分享/">资源分享</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/最新动向/">最新动向</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/最新动向/杂项其它/">杂项其它</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/最新动向/杂项其它/热点摘录/">热点摘录</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂项其它/">杂项其它</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/杂项其它/热点摘录/">热点摘录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂项其它/课件下载/">课件下载</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/杂项其它/课件下载/资源分享/">资源分享</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂项其它/资源分享/">资源分享</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/热点摘录/">热点摘录</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/翻译作品/">翻译作品</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/课件下载/">课件下载</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/课件下载/资源分享/">资源分享</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源分享/">资源分享</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ActionScript/">ActionScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AnyDo/">AnyDo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AppDate/">AppDate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AppStar（应用汇/">AppStar（应用汇)</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AppStory（达人秀）/">AppStory（达人秀）</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Articulate/">Articulate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CamtaisaStudio/">CamtaisaStudio</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Camtasia/">Camtasia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LAMP/">LAMP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MOOC/">MOOC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac软件/">Mac软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Moodle/">Moodle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDF/">PDF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDF周边/">PDF周边</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PPT绘制表情/">PPT绘制表情</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RSS/">RSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WampServer/">WampServer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/e-Learning/">e-Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eLearning/">eLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS应用/">iOS应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务管理/">事务管理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/互传文件/">互传文件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/会议通知/">会议通知</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/信息技术应用能力提升/">信息技术应用能力提升</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/信息技术教育应用/">信息技术教育应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/办公效率/">办公效率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/协作教研/">协作教研</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/名师工作室/">名师工作室</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/团队成员/">团队成员</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图像/">图像</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图像处理/">图像处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/在线学习/">在线学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/在线工具/">在线工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/在线教育/">在线教育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/地平线报告/">地平线报告</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/培训资源/">培训资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/外语学习/">外语学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/媒体下载/">媒体下载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/媒体报道/">媒体报道</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/媒体播放/">媒体播放</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学术资源库/">学术资源库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学生视角/">学生视角</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安卓平台/">安卓平台</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安卓手机/">安卓手机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小学英语/">小学英语</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/幼儿识字/">幼儿识字</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/应用软件/">应用软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建站技术/">建站技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开卷有益/">开卷有益</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开放课程/">开放课程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信公众平台/">微信公众平台</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微课/">微课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微课培训/">微课培训</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/报告/">报告</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/提升工程/">提升工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/故事板/">故事板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教学APP/">教学APP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教学设计/">教学设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教学软件/">教学软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教育评论/">教育评论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/无线投影/">无线投影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/时评/">时评</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/时间管理/">时间管理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/智慧教育/">智慧教育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂项/">杂项</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/校园BYOD/">校园BYOD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/案例/">案例</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/江山/">江山</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/混合式学习/">混合式学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/混合式学习课程建设/">混合式学习课程建设</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/混合式教学/">混合式教学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电子书/">电子书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电子白板/">电子白板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/短信/">短信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/研究成果/">研究成果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/研究方法/">研究方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科学/">科学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动学习/">移动学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动学习应用/">移动学习应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动教学/">移动教学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统软件/">系统软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统配置/">系统配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/素材/">素材</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网易云课堂/">网易云课堂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络学习/">网络学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络教学/">网络教学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/翻转课堂/">翻转课堂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/能力提升工程/">能力提升工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英语/">英语</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/萝卜书摘/">萝卜书摘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/虚拟机/">虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/视频/">视频</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/视频处理/">视频处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/讲座/">讲座</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/讲稿/">讲稿</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课堂观察实践/">课堂观察实践</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程开发/">课程开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程教学/">课程教学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课题研究/">课题研究</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/质量保障/">质量保障</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/资源/">资源</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/资源站点/">资源站点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件下载/">软件下载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件推荐/">软件推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/送教/">送教</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ActionScript/" style="font-size: 10px;">ActionScript</a> <a href="/tags/AnyDo/" style="font-size: 10px;">AnyDo</a> <a href="/tags/AppDate/" style="font-size: 11px;">AppDate</a> <a href="/tags/AppStar（应用汇/" style="font-size: 11px;">AppStar（应用汇)</a> <a href="/tags/AppStory（达人秀）/" style="font-size: 12px;">AppStory（达人秀）</a> <a href="/tags/Articulate/" style="font-size: 10px;">Articulate</a> <a href="/tags/CamtaisaStudio/" style="font-size: 10px;">CamtaisaStudio</a> <a href="/tags/Camtasia/" style="font-size: 14px;">Camtasia</a> <a href="/tags/Flash/" style="font-size: 12px;">Flash</a> <a href="/tags/LAMP/" style="font-size: 10px;">LAMP</a> <a href="/tags/MOOC/" style="font-size: 10px;">MOOC</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/Mac软件/" style="font-size: 10px;">Mac软件</a> <a href="/tags/Moodle/" style="font-size: 15px;">Moodle</a> <a href="/tags/PDF/" style="font-size: 10px;">PDF</a> <a href="/tags/PDF周边/" style="font-size: 10px;">PDF周边</a> <a href="/tags/PPT绘制表情/" style="font-size: 10px;">PPT绘制表情</a> <a href="/tags/RSS/" style="font-size: 10px;">RSS</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/WampServer/" style="font-size: 10px;">WampServer</a> <a href="/tags/Windows/" style="font-size: 12px;">Windows</a> <a href="/tags/e-Learning/" style="font-size: 11px;">e-Learning</a> <a href="/tags/eLearning/" style="font-size: 10px;">eLearning</a> <a href="/tags/iOS应用/" style="font-size: 10px;">iOS应用</a> <a href="/tags/事务管理/" style="font-size: 10px;">事务管理</a> <a href="/tags/互传文件/" style="font-size: 10px;">互传文件</a> <a href="/tags/会议通知/" style="font-size: 11px;">会议通知</a> <a href="/tags/信息技术应用能力提升/" style="font-size: 10px;">信息技术应用能力提升</a> <a href="/tags/信息技术教育应用/" style="font-size: 12px;">信息技术教育应用</a> <a href="/tags/办公效率/" style="font-size: 10px;">办公效率</a> <a href="/tags/协作教研/" style="font-size: 10px;">协作教研</a> <a href="/tags/名师工作室/" style="font-size: 10px;">名师工作室</a> <a href="/tags/团队成员/" style="font-size: 15px;">团队成员</a> <a href="/tags/图像/" style="font-size: 11px;">图像</a> <a href="/tags/图像处理/" style="font-size: 14px;">图像处理</a> <a href="/tags/在线学习/" style="font-size: 10px;">在线学习</a> <a href="/tags/在线工具/" style="font-size: 11px;">在线工具</a> <a href="/tags/在线教育/" style="font-size: 10px;">在线教育</a> <a href="/tags/地平线报告/" style="font-size: 11px;">地平线报告</a> <a href="/tags/培训资源/" style="font-size: 10px;">培训资源</a> <a href="/tags/外语学习/" style="font-size: 10px;">外语学习</a> <a href="/tags/媒体下载/" style="font-size: 10px;">媒体下载</a> <a href="/tags/媒体报道/" style="font-size: 10px;">媒体报道</a> <a href="/tags/媒体播放/" style="font-size: 10px;">媒体播放</a> <a href="/tags/学术资源库/" style="font-size: 10px;">学术资源库</a> <a href="/tags/学生视角/" style="font-size: 10px;">学生视角</a> <a href="/tags/安卓平台/" style="font-size: 10px;">安卓平台</a> <a href="/tags/安卓手机/" style="font-size: 10px;">安卓手机</a> <a href="/tags/小学英语/" style="font-size: 10px;">小学英语</a> <a href="/tags/幼儿识字/" style="font-size: 10px;">幼儿识字</a> <a href="/tags/应用软件/" style="font-size: 10px;">应用软件</a> <a href="/tags/建站技术/" style="font-size: 12px;">建站技术</a> <a href="/tags/开卷有益/" style="font-size: 10px;">开卷有益</a> <a href="/tags/开放课程/" style="font-size: 12px;">开放课程</a> <a href="/tags/微信/" style="font-size: 12px;">微信</a> <a href="/tags/微信公众平台/" style="font-size: 10px;">微信公众平台</a> <a href="/tags/微课/" style="font-size: 20px;">微课</a> <a href="/tags/微课培训/" style="font-size: 10px;">微课培训</a> <a href="/tags/报告/" style="font-size: 10px;">报告</a> <a href="/tags/提升工程/" style="font-size: 10px;">提升工程</a> <a href="/tags/故事板/" style="font-size: 10px;">故事板</a> <a href="/tags/教学APP/" style="font-size: 11px;">教学APP</a> <a href="/tags/教学设计/" style="font-size: 10px;">教学设计</a> <a href="/tags/教学软件/" style="font-size: 12px;">教学软件</a> <a href="/tags/教育评论/" style="font-size: 10px;">教育评论</a> <a href="/tags/无线投影/" style="font-size: 10px;">无线投影</a> <a href="/tags/时评/" style="font-size: 10px;">时评</a> <a href="/tags/时间管理/" style="font-size: 10px;">时间管理</a> <a href="/tags/智慧教育/" style="font-size: 10px;">智慧教育</a> <a href="/tags/杂项/" style="font-size: 10px;">杂项</a> <a href="/tags/校园BYOD/" style="font-size: 10px;">校园BYOD</a> <a href="/tags/案例/" style="font-size: 10px;">案例</a> <a href="/tags/江山/" style="font-size: 10px;">江山</a> <a href="/tags/混合式学习/" style="font-size: 10px;">混合式学习</a> <a href="/tags/混合式学习课程建设/" style="font-size: 10px;">混合式学习课程建设</a> <a href="/tags/混合式教学/" style="font-size: 11px;">混合式教学</a> <a href="/tags/电子书/" style="font-size: 12px;">电子书</a> <a href="/tags/电子白板/" style="font-size: 12px;">电子白板</a> <a href="/tags/短信/" style="font-size: 10px;">短信</a> <a href="/tags/研究成果/" style="font-size: 12px;">研究成果</a> <a href="/tags/研究方法/" style="font-size: 10px;">研究方法</a> <a href="/tags/科学/" style="font-size: 10px;">科学</a> <a href="/tags/移动学习/" style="font-size: 19px;">移动学习</a> <a href="/tags/移动学习应用/" style="font-size: 10px;">移动学习应用</a> <a href="/tags/移动教学/" style="font-size: 13px;">移动教学</a> <a href="/tags/系统软件/" style="font-size: 10px;">系统软件</a> <a href="/tags/系统配置/" style="font-size: 10px;">系统配置</a> <a href="/tags/素材/" style="font-size: 10px;">素材</a> <a href="/tags/网易云课堂/" style="font-size: 11px;">网易云课堂</a> <a href="/tags/网络学习/" style="font-size: 11px;">网络学习</a> <a href="/tags/网络教学/" style="font-size: 11px;">网络教学</a> <a href="/tags/翻转课堂/" style="font-size: 16px;">翻转课堂</a> <a href="/tags/能力提升工程/" style="font-size: 13px;">能力提升工程</a> <a href="/tags/英语/" style="font-size: 11px;">英语</a> <a href="/tags/萝卜书摘/" style="font-size: 10px;">萝卜书摘</a> <a href="/tags/虚拟机/" style="font-size: 10px;">虚拟机</a> <a href="/tags/视频/" style="font-size: 10px;">视频</a> <a href="/tags/视频处理/" style="font-size: 10px;">视频处理</a> <a href="/tags/讲座/" style="font-size: 16px;">讲座</a> <a href="/tags/讲稿/" style="font-size: 11px;">讲稿</a> <a href="/tags/课堂观察实践/" style="font-size: 10px;">课堂观察实践</a> <a href="/tags/课程开发/" style="font-size: 10px;">课程开发</a> <a href="/tags/课程教学/" style="font-size: 12px;">课程教学</a> <a href="/tags/课题研究/" style="font-size: 11px;">课题研究</a> <a href="/tags/质量保障/" style="font-size: 10px;">质量保障</a> <a href="/tags/资源/" style="font-size: 14px;">资源</a> <a href="/tags/资源站点/" style="font-size: 12px;">资源站点</a> <a href="/tags/软件下载/" style="font-size: 17px;">软件下载</a> <a href="/tags/软件推荐/" style="font-size: 18px;">软件推荐</a> <a href="/tags/送教/" style="font-size: 10px;">送教</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">January 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/Hello-World-0/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/nicetool/">在线工具大全：NiceTool+</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/pdf365/">在线PDF格式互转平台：PDF365</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/mac-soft-download-waitsun/">Mac应用下载站点：爱情守望者</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Lester Ruan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
