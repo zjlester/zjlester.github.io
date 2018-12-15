@@ -233,6 +233,566 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2016/05/translation-2016051303/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lester Ruan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="信息技术教育应用">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/05/translation-2016051303/" itemprop="url">基于安卓平台的移动学习应用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-13T22:51:33+08:00">
+                2016-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/工作室动态/" itemprop="url" rel="index">
+                    <span itemprop="name">工作室动态</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>原文： <a href="http://www.ilester.net/wp-content/uploads/2016/05/Mobile-Learning-Application-for-Basic-Router-and-Switch-Configuration-on-Android-Platform.pdf" target="_blank" rel="noopener">Mobile Learning Application for Basic Router and Switch Configuration on Android Platform</a> 以下为浙江师范大学本科毕业设计(论文)外文翻译。译者：王露婷;校译：阮高峰。</p>
+<blockquote>
+<p><strong>摘要：</strong>本文介绍了以路由器和交换机的基本配置为例的安卓平台移动学习应用的设计与开发，采用了Java编程语言，帮助在马来西亚马拉工业大学计算机网络技术部、计算机和数学科学学院的学生学习计算机网络课程。我们的做法是结合多媒体动画的概念和命令语句，创建一个普遍的学习环境，来系统地呈现路由器和交换机配置。有了这个移动学习应用，学生可以随时随地根据自己的进度学习。本移动学习应用计划对目前的传统课堂和电子学习系统加以补充。初步测试表明，一个精心呈现的多媒体动画功能，通过移动电话传送，有着巨大的潜力来促进并加强学习过程。</p>
+</blockquote>
+<p><strong>关键字：</strong>安卓平台；Java编程语言；移动学习应用；路由器和交换机配置</p>
+<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a><strong>一、简介</strong></h3><p>  计算技术在学习方面的用途已经以各种不同的方式被注意到。在过去的几十年里，电子学习已经被世界上许多地方的公立学校和大学生接受并采用。他们对电子学习这个术语和技术都很熟悉，然而近些年来，移动技术的快速发展开辟了一个被称为移动学习的全新领域。移动学习是电子学习的下一代，基于移动设备（Sharples，M，2005）。诸如IEEE 802.11、蓝牙和GPRS的这些无线技术被运用到台湾真理大学的一个项目当中，该项目旨在研究非正式课堂和电子书包系统的发展（Chang C，Sheu J，2007）。一个名为Math4Mobile的试点案例研究在包含手机应用程序的新环境中进行，旨在支持移动学习（Botzer，G，2007）。总之，该研究表明移动学习促进了学生的经验学习。   P．Pocatilu，F.Alecu和M.Vetrici提出了安卓平台的分布式移动学习应用开发的主要步骤（2010）。客户端应用程序使用Web服务与服务器通信。开发的原型包括测试模块。使用Web服务的移动学习应用程序通过在移动客户端和服务器之间提供一个标准化的通信方式来推动开发进程。有一项关于如何使用移动设备和移动应用开发作为一种机制来教计算机科学专业的学生编程入门的研究（Mahmoud,Q.H和Popowicz，P.,2010）。他们的研究目的是将移动设备集成到计算机教育当中，相较于其它教学方法可能会提供学生更多的好处。在他们的研究中，途径包括以Java微型版（ME）平台和黑莓智能手机作为设备。该应用相关的软件工具，如黑莓的Java开发环境，用于构建基于Java ME和黑莓的应用程序和黑莓智能手机模拟器。   田纳西大学的马丁有一个项目，开发了基于谷歌的安卓平台和苹果的iOS平台的移动学习应用，用于电气工程课程中调查其对学生成绩的影响。这些应用是基于测试风格和触摸应用程序来提问学生有关电气工程学科的问题。有几种不同的问题可供选择，包括数字逻辑门分析、离散信号卷积和数字滤波器的设计。一旦学生完成任务，评分结果可以自动发送到老师的电子邮箱（Potts，J，Moore，N和Sukittanon，S.，2011）。</p>
+<h3 id="二、系统设计和开发"><a href="#二、系统设计和开发" class="headerlink" title="二、系统设计和开发"></a><strong>二、系统设计和开发</strong></h3><p>  图1展示了系统的总体设计。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/1-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/1-1-300x192.png" alt="1"></a></p>
+<h4 id="（一）硬件和软件要求"><a href="#（一）硬件和软件要求" class="headerlink" title="（一）硬件和软件要求"></a><strong>（一）硬件和软件要求</strong></h4><p>  以下是开发该应用程序所需的硬件需求：</p>
+<ul>
+<li><p>个人台式机/笔记本已经被用于开发此应用程序，并且在开发过程中所有软件将被安装。所需的最小内存大小是1GB，以便能够成功运行或执行应用程序。</p>
+</li>
+<li><p>服务器存储此应用程序和内容发布，开发者需要上传路由器和交换机的基本配置内容到数据库。选择MediaFire文件托管存储此应用程序。用户很容易从这个托管站点下载应用程序，如果他们想要使用该应用程序。智能手机相较于一个当代基本功能的手机，能够提供更先进的计算能力和连通性。</p>
+</li>
+<li><p>移动手机和功能手机可能被认为是内部集成了移动电话的掌上电脑。对于这个项目，使用三星Galaxy，因为它支持此应用程序开发的安卓平台。</p>
+</li>
+</ul>
+<p>  以下是开发该应用程序所需的硬件需求：</p>
+<ul>
+<li><p>谷歌开发的手机操作系统安卓是基于Linux内核的修改版本。安卓操作系统上运行的Java应用程序软件堆栈由Java面向对象应用框架基于Java核心库构成。安卓的软件开发工具包（SDK）包含一组全面的开发工具，用于开发支持安卓平台的手机应用程序。</p>
+</li>
+<li><p>Eclipse是插件运行的平台，致力于构建开放的开发平台，该平台包括可扩展的框架、工具，以及在运行时构建、开发和管理软件。</p>
+</li>
+<li><p>Eclipse是一个可用于编写程序来开发移动应用的软件，例如使用Java编程语言。该平台由供应商用于构建解决方案的开源软件组件工具组成，插件集成了软件的工作台。</p>
+</li>
+<li><p>Adobe Photoshop是一个图形编辑软件,由Adobe系统开发并发布。该软件用于制作此应用程序的背景界面，是当前商业位图和图像处理软件的市场领导者。</p>
+</li>
+</ul>
+<h4 id="（二）设置笔记本电脑"><a href="#（二）设置笔记本电脑" class="headerlink" title="（二）设置笔记本电脑"></a><strong>（二）设置笔记本电脑</strong></h4><p>  设置笔记本电脑需要几个阶段，例如：</p>
+<ul>
+<li><p>用安卓软件开发工具（ADT）和模拟器（AVD）安装并配置Eclipse，以准备开发计算机，确保它满足系统要求。之后安装Windows SDK起动器包，因为使用的操作系统是Windows 7。开发者需要添加用于开发SDK的包，在应用程序可以被开发之前从安卓SDK管理器中安装。</p>
+</li>
+<li><p>下一步是安装Eclipse。Eclipse可以为安卓开发适当改编，因为开发人员可以得到插件来帮助创建安卓项目。Eclipse有几个版本，为了此项目的开发，开发者使用供Java开发人员使用的Eclipse集成开发环境（IDE）。</p>
+</li>
+<li><p>然后需要安装安卓开发工具（ADT）。安装这个，要打开Eclipse，选择帮助，而不是点击“安装新软件”。然后单击“添加”按钮，创建一个新条目：名字：“Android ADT”（这个空间是为自己的个人使用）和位置：<a href="https://dl-ssl.google.com/android/eclipse/。检查所有的盒子安装工具，然后点击“我同意”，“下一步”，“是的”，等到它要求重新启动eclipse。" target="_blank" rel="noopener">https://dl-ssl.google.com/android/eclipse/。检查所有的盒子安装工具，然后点击“我同意”，“下一步”，“是的”，等到它要求重新启动eclipse。</a></p>
+</li>
+<li><p>最后也是重要的一点，开发人员需要创建安卓虚拟设备（AVD），作为在电脑上运行和测试安卓应用程序项目的模拟器。在同一个“安卓SDK和AVD管理器”中选择左边的“虚拟设备”，创建一个“新”的。不同的AVD会代表不同的安卓版本以及不同的硬件规格和屏幕密度。</p>
+</li>
+</ul>
+<h4 id="（三）设置服务器"><a href="#（三）设置服务器" class="headerlink" title="（三）设置服务器"></a><strong>（三）设置服务器</strong></h4><p>  设置服务器需要几个阶段，例如：</p>
+<ul>
+<li><p>首先，需要在应用上传并存储在Mediafire文件托管数据库前注册一个帐户。注册表单必须在继续下一个步骤前完成。</p>
+</li>
+<li><p>将应用程序文件上传到到数据库，只需拖动安卓应用程序文件（.apk），等到上传过程完成。下载链接将自动由文件托管生成。点击分享链接，它会打开生成的链接。用户可以使用此链接下载得到这个移动学习应用程序。</p>
+</li>
+<li><p>开发者可以在数据库中访问安卓应用程序包（.apk）时，内容交付开发过程完成。只有开发人员可以对数据库中的文件进行更改。</p>
+</li>
+</ul>
+<h4 id="（四）设置手机"><a href="#（四）设置手机" class="headerlink" title="（四）设置手机"></a><strong>（四）设置手机</strong></h4><p>  设置手机需要几个阶段，例如：</p>
+<ul>
+<li><p>开发者需要确保手机在开发过程结束时可以安装应用程序。包括检查一些设置，确保手机设置成正确的方式，然后用已安装和配置好的USB线连接手机到电脑。手机要准备开始运作，有几个步骤需要遵循：</p>
+</li>
+<li><p>点击“主页”按钮，进入手机的主屏幕。</p>
+</li>
+<li><p>点击主屏幕上的“菜单”按钮，然后单击“设置”，再点击“应用程序”。</p>
+</li>
+<li><p>如果手机有一个未知来源设置，确保未知来源复选框被选中。</p>
+</li>
+<li><p>点击“开发”，确保USB调试和保持唤醒的复选框都被选中。</p>
+</li>
+<li><p>最后，用USB数据线连接手机和已安装并配置好的电脑。</p>
+</li>
+</ul>
+<h4 id="（五）移动学习模块"><a href="#（五）移动学习模块" class="headerlink" title="（五）移动学习模块"></a><strong>（五）移动学习模块</strong></h4><p>  显示应用程序的流程需要几个设计阶段。原型开发包括五项活动：流程图、背景图、用例图​、故事板和内容交付框架。   移动学习应用的原型故事板有以下模块：</p>
+<ul>
+<li><p>应用程序的主模块菜单。用户可以点击任何可取的选择，如下所示。</p>
+</li>
+<li><p>关于此应用程序的介绍模块和一些关于开发者的细节可供用户了解。</p>
+</li>
+<li><p>在用户做路由器和交换机的一些基本配置之前，组件模块需要进行简单的网络连接。当用户单击每个组件时，将会有每个组件的解释说明。</p>
+</li>
+<li><p>本教程模块将会提供关于如何做路由器和交换机的基本配置的一步一步的过程。所有的基本配置命令将显示在这里，以便用户日后可以很容易地地学习如何实现它们。</p>
+</li>
+<li><p>结合从教程模块中所学的知识，配置模块通过练习帮助用户进一步加强对交换机和路由器的基本配置的掌握。此模块可以作为衡量用户理解程度的评估。</p>
+</li>
+<li><p>关于模块包含的项目成员的个人资料。</p>
+</li>
+</ul>
+<p>  该系统采用了思科（Wendell Odom，2011）提供的教科书的内容。独立的模块编写，并且共享数据。每个模块都有一个关联的屏幕，都从主屏幕启动。</p>
+<h3 id="三、测试和结果"><a href="#三、测试和结果" class="headerlink" title="三、测试和结果"></a><strong>三、测试和结果</strong></h3><p>  测试此应用程序，开发人员使用三星Galaxy S手机固件版本（2.3.4 - GINGERBREAD）运行安卓平台。用户可以使用蜂窝技术或无线网络在互联网上下载此应用程序。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/2-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/2-1-300x178.png" alt="2"></a>   图2显示了下载页面，这是当用户想下载使用这个关于路由器和交换机的基本配置的移动学习应用时。用户进入下载链接<a href="http://www.mediafire.com/?v6msmbm3t15o3ss下载应用程序，然后如上页面将会出现。点击下载按钮，应用程序会自动下载到用户的手机。" target="_blank" rel="noopener">http://www.mediafire.com/?v6msmbm3t15o3ss下载应用程序，然后如上页面将会出现。点击下载按钮，应用程序会自动下载到用户的手机。</a>   可以在手机内部下载文件夹中找到托管文件传输过来的安装程序包文件。安装应用程序，点击Basic Network.apk文件，如图3a所示，是安卓安装包文件。下一个屏幕如图3b所示，会在单击安卓包文件后出现。用户将被询问是否想要安装此应用程序。点击安装按钮继续安装进程，单击取消终止安装。点击安装应用程序后将会安装。屏幕显示安装进度，将在下一个屏幕如图3c中显示。安装过程大约花费几分钟，完成后应用程序可以在移动电话上使用。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/3-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/3-1-300x135.png" alt="3"></a>   安装过程完成后，转到手机主屏幕，如图4a所示。主菜单上出现一个图标标签是基本配置的应用程序，表示该应用程序已被安装。点击图标，用户可以开始使用应用程序。这是最后的阶段，所有的任务，如安装和配置都已完成。在这个阶段，应用程序需要进行测试，以确保功能运行正常，找出任何可能出现的缺陷。利益相关者测试应用程序，结果则被填充到给定的测试结果表中。配置模块测试的细节和结果在应用程序中将进行如下说明。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/4-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/4-1-300x193.png" alt="4"></a>   点击图4a主屏幕上的基本配置的图标标签，开始使用应用程序。应用程序主菜单将会出现，如图4b所示。点击图4b中应用程序主菜单的配置练习，用户将在做配置任务前得到地址表和拓扑，如图5a所示。用户需要按照地址表中的ip地址、子网掩码和默认网关。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/5-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/5-1-300x228.png" alt="5"></a>   用户单击next按钮进入模拟屏幕。模拟屏上有路由器、PC1、PC2、交叉电缆，测试连接按钮任务，如图5b所示。用户需要点击交叉电缆，随后fastethernet0/0和fastethernet0/1将会出现。选择fastethernet0/0，然后单击路由器，把它连接到PC1。采用相同的步骤，点击fastethernet0/1，然后单击路由器，把它连接到PC2。   在根据地址表提供的信息来配置PC1和PC2之前，用户需要点击PC1进入PC1的菜单配置，如图6a所示。现在用户点击PC2，PC2的菜单配置出现，如图6b所示。应用与PC1相同的步骤，用户需要设置PC2的IP地址、子网掩码和网关。对于PC2，输入的IP地址是192.168.20.2，子网掩码为255.255.255.0，网关是192.168.20.1。然后，点击应用保存之前输入的数据，并且返回到模拟屏幕。当用户在模拟屏上点击路由器图标，路由器命令行接口配置将会出现，如图6c所示。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/6-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/6-1-300x130.png" alt="6"></a>   这是路由器的命令行界面（CLI），用户需要配置路由器。路由器和两台PC机通过fastethernet0/0和fastethernet0/1有线连接后，用户需要配置。首先，用户输入ena进入路由器的特权模式。在特权模式下，用户输入config terminal进入路由器的配置模式。用户需要设置fastethernet0/0的配置。输入interface fa0/0进入fastethernet0/0接口。用户为这个接口输入的IP地址是192.168.10.1，子网掩码是255.255.255.0。为了确保接口启用，用户输入no shutdown命令。现在用户需要设置fastethernet0/1的配置，但在此之前，应用退出命令退出fastethernet0/0接口。在路由器配置模式下，输入interface fa0/1进入fastethernet0/1接口。此接口输入的IP地址是192.168.20.1，子网掩码是255.255.255.0。然后输入no shutdown命令，以确保接口启动。最后，路由器的整个配置完成后，配置完成消息框将会出现。输入end命令退出命令行界面（CLI）并且返回到模拟屏。   完成路由器和PC1、PC2的所有配置后，用户需要通过点击模拟屏上的测试连接按钮进行测试连接。如果路由器和PC连接成功，连接成功的消息框将会在屏幕上出现。反之，如果连接失败，连接失败的消息框将会出现，此时用户可以做故障排查。   点击故障排查测试，开始故障排查。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/7.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/7-300x158.png" alt="7"></a>   图7a展示了排查故障的拓扑。为了故障排查，两台PC和路由器都设置了不正确的IP地址、子网掩码和默认网关，使得连接失败。用户需要基于给定的路由表解决和纠正错误，确保连接成功。   PC1不正确的IP地址192.168.10.1和子网掩码192.168.10.10，如图7b所示。 用户使用正确的IP地址192.168.10.2和子网掩码192.168.10.1矫正错误。纠正所有错误之后，用户点击应用按钮，保存所做的更改，并返回故障仿真检测。PC2给定的不正确的IP地址192.168.20.1和子网掩码192.168.20.5，如图7c所示。 用户使用正确的IP地址192.168.20.2和子网掩码192.168.20.1矫正错误。点击应用按钮保存之前所做的更改，并返回故障仿真检测。   当用户点击路由器时，图8a出现。这表明已经在路由器中输入了不正确的IP地址和子网掩码。用户需要纠正不正确的IP地址和子网掩码。点击编辑按钮进入命令行界面（CLI）的故障排查进行配置更改，如图8b所示。   图8c中有一个文本域供用户输入正确的配置，输入命令后点击回车按钮。首先，用户输入ena进入路由器的特权模式。输入config t命令进入路由器的配置模式。使用int fa0/0命令进入fastethernet0/0接口，输入正确的IP地址192.168.10.1和子网掩码255.255.255.0。 然后，输入int fa0/1进入fastethernet0/1接口，输入正确的IP地址192.168.20.1和子网掩码255.255.255.0。更改后，点击应用按钮保存配置并返回故障仿真检测。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/8.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/8-300x138.png" alt="8"></a>   进行所有更改并保存后，用户可以再一次点击路由器，检查配置是否已经改变。下面的图9显示了和之前相比正确的IP地址和子网掩码。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/9.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/9-191x300.png" alt="9"></a>   最后，完成所有校正后，用户需要检查PC1、PC2和路由器之间的连接是否成功。用户点击测试连接按钮，当连接成功时，屏幕上会显示一条消息，如上图9所示。</p>
+<h3 id="四、结论和未来的工作"><a href="#四、结论和未来的工作" class="headerlink" title="四、结论和未来的工作"></a><strong>四、结论和未来的工作</strong></h3><p>  开发移动应用不是一项容易的任务。在本文中，我们介绍了开发安卓移动学习应用的主要步骤。客户端应用程序使用Web服务与服务器通信，下载应用程序。系统开发包括测试模块。测试结果表明，该系统正常运行。   下一步，我们将对原型进行评估，评估该系统的学习效率和效果。该系统将持续发展，未来的工作包括改善系统，在系统中添加更多的内容模块和多项选择题，创造更多交互式学习选择的分类体系，不断增强系统来满足学生的需求，进一步的实验将进行更长一段时间。</p>
+<h3 id="五、致谢"><a href="#五、致谢" class="headerlink" title="五、致谢"></a><strong>五、致谢</strong></h3><p>  本研究由以下机构支持：UiTM卓越研究基金(教师强化研究)资助计划、研究管理协会、马来西亚雪兰莪州莎阿南马拉工业大学，下批编号No. 600-RMI/DANA 5/3/RIF (61/2012)。</p>
+<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a><strong>参考文献</strong></h4><p>  Sharples, M. (2005). Disruptive devices: mobile technology for conversational learning. International Journal of Continuing Engineering Education and Life Long Learning, 12(5/6), 504-520.   Chang C., Sheu J.(2007). Design and Implementation of Ad Hoc Classroom and eSchoolbag Systems for Ubiquitous Learning, Proc. of IEEE International Workshop on Wireless and Mobile Technologies in Education (WMTE 2002) , (p. 8-14).   Botzer, G and Yershalmy, M. (2007) Mobile application for mobile learning. Paper presented at IADIS International Conference on Cognition and Exploratory Learning in Digital Age (CELDA 2007)   P. Pocatilu, F. Alecu and M. Vetrici (2010). Measuring the Efficiency of Cloud Com-puting for E-learning Systems, WSEAS   TRANSACTIONS on COMPUTERS, Issue 1, Volume 9, January 2010, pp. 42-51.   Mahmoud, Q.H and Popowicz, P. (2010). A mobile application development approach to teaching introductory programming. Paper presented at Frontiers in Education Conference (FIE), 2010   Potts, J, Moore, N and Sukittanon, S. (2011). Developing Mobile Learning Applications for Electrical Engineering Courses. Paper presented at Southeaston, 2011 Proceedings of IEEE.   Wendell Odom (2011). CCNA ICND2 640-816 Official Cert Guide, 3rd Edition, Cisco Press 2011.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2016/05/r-20160513/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lester Ruan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="信息技术教育应用">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/05/r-20160513/" itemprop="url">校园BYOD的契机与挑战 ——中美两国中小学校自带设备应用现状比较</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-13T22:01:56+08:00">
+                2016-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/原创文章/" itemprop="url" rel="index">
+                    <span itemprop="name">原创文章</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>工作室阮高峰博士受《中国信息技术教育》杂志邀请，参与关于BYOD主题的对话。阮博士在2013年访问美国西伊利诺大学时结识的霍伊特·汉普希尔教授，毫无疑问成了与他就BYOD主题对话的另一位专家。 转载如下：</p>
+<h3 id="对话嘉宾："><a href="#对话嘉宾：" class="headerlink" title="对话嘉宾："></a><strong>对话嘉宾：</strong></h3><p>                <a href="http://www.ilester.net/wp-content/uploads/2016/05/1-2.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/1-2.png" alt="1"></a>   霍伊特·汉普希尔(Hoyet Hamphill)：美国西伊利诺大学（Western Illinois University）教授、教学设计与技术（Instructional Design andTechnology）系主任。   他是一位活跃在美国乃至全世界教育技术领域的学术研究者和实践者。早年在美国密苏里－哥伦比亚大学获得心理学学士和教育学硕士学位后，又在美国犹他州立大学获得了教学设计与技术专业博士学位。这一学术背景使得他在教育技术领域的研究中始终保持着开阔的视野和独特的视角，擅长（同时也热衷于）对技术支持环境中的学习心理机制进行深入的探究，同时又能跃升至教育系统变革的角度提出实践的建议。近些年，他的主要研究兴趣集中于信息技术，特别是网络环境下教学交互、群体协作和评价机制的探索与实践，除了屡在《英国教育技术杂志》（ British Journal of Educational Technology ）等期刊上发表文章外，他也是AECT等教育技术领域学术会议的常客。               <a href="http://www.ilester.net/wp-content/uploads/2016/05/2-2.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/2-2.png" alt="2"></a>   阮高峰：教育技术学博士，2012年受以色列教育部邀请，赴以色列对外交流与发展署“奥法利研修中心”（Orfi Center，MASHAV）访问，2013年以访问教员（Visiting Professor）身份访学美国西伊利诺大学。现为浙江师范大学教育技术系教师、继续教育学院院长助理。   主要从事网络和移动技术环境下的教与学创新、非正式学习等主题的教学研究工作，以及远程与混合式教师专业发展培训的实践与管理工作。同时，他是活跃的信息技术教育应用推广者、撰稿人和译者，是浙江省中小学教师信息技术应用能力提升工程课程开发指南的核心成员、全球最大在线学习社区之一的Edmodo中文团队发起者，也是在“网易云课堂”等国内教育资源开放平台发布多门课程的签约讲师。</p>
+<p>  BYOD是英文“Bring your own devices”的缩写，即“自带设备”，指的是用户携带自己的笔记本电脑、平板电脑、智能手机等计算设备在工作与学习情境中使用。</p>
+<ul>
+<li><strong>中美两国中小学BYOD的现状及成因</strong></li>
+</ul>
+<p>  <strong>阮高峰：</strong>霍伊特，非常感谢您能答应我的邀请，参与这场关于自带设备（Bring Your Own Devices，BYOD）在中小学校应用的对话。近些年，在世界范围内对BYOD的关注与实践已经不只是知识企业了，很多其他形态的机构包括中小学校也加入到了对BYOD的研究、探索与应用实践队伍中，在中国一些教育信息技术推进比较成熟的区域，特别是东部沿海地区的城市学校，也陆续出现了BYOD的试点应用。您在近三年也一直保持着对这一主题的关注，能否请您给我们的读者介绍一下美国中小学实施BYOD的相关情况，并且说明一下BYOD在美国学校逐渐得到认可的背后的原因是什么。   <strong>霍伊特·汉普希尔：</strong>好的，感谢邀请。正如你说的，BYOD的实践最早出现于知识企业，因为这一模式能给予员工比较大的自由进行个性工作环境配置，逐渐成为一些企业，特别是IT和互联网初创企业所推崇的模式。当然，今天这一模式也得到一些发展成熟的大企业，包括财富500强企业等大型跨国公司的认可。美国的中小学对技术应用的意识向来比较敏锐，出于其自身的特殊性，如预算申请的限制等，对BYOD的态度也比较开放。实际上，如果不将这里所指的设备限定于现在的笔记本电脑、平板电脑之类的话，美国中小学校BYOD的探索已经有将近10年的历史了。只是现在，越来越多的学校加入了BYOD实践者的队伍。据Ambient Insight的调查，过去一年间，美国中小学尝试BYOD试点的项目增加了47%。新近的一项针对美、英两国教师的调查也显示，44%的受调查者允许学生在课堂上使用自带的计算设备。   BYOD在美国中小学兴起的原因有很多，其中重要的一点就是计算设备已经广泛地进入到我们每个人的日常生活了。首先，在今天很多人的生活中，一个人拥有一个计算设备已经成为现实，甚至很多人是同时拥有笔记本电脑、平板电脑，随身还携带一个智能手机，计算设备成本下降与高度普及应该说是实施BYOD的一个重要前提。其次，从客观上来说，学校情境中使用BYOD也有其优势，如果学校教育中的计算设备均由学校来提供，那么受经费预算的限制，很难做到软硬件的及时更新，而我们知道计算机行业一个十分重要的特点就是其发展的日新月异。相形之下，很多家庭的计算设备更新往往更超前一些。因此，BYOD也成为一些学校应对预算紧张的一种无奈之举。同样是Ambient Insight的调查，有项数据很有意思，在过去的五年间，美国中小学参与在线与混合式学习的学生人数由2009年的200余万增加到了2014年的1000多万，但受调查的学校中有74%表示在技术设施预算上下降了，这其中应该有BYOD的功劳。从实际应用的效果来看，BYOD也确实有其可取之处，在有着传统信息基础设施的学校中，学生需要花费时间去熟悉计算机的软件与系统配置，然后才能进入问题情境，如果作品只完成一半，下次还需要继续同样的热身阶段。但在BYOD中，学生可以依据个人的特点配置最具效率的计算机环境，即使更换了教室甚至回到家中，都可以迅速地进入熟悉的情境，也就是说，BYOD可以让学生的学习体验尽可能地延续。   我记得在前年访问中国的行程中，你曾安排我去杭州市一所实施BYOD的学校参观，我很好奇在绝大多数还是由学校提供计算设备的背景下，中国的BYOD先行者们又是如何决策采纳这一模式的？           <a href="http://www.ilester.net/wp-content/uploads/2016/05/3-2.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/3-2-300x243.png" alt="3"></a>   <strong>阮高峰：</strong>这几年，随着“翻转课堂”等网络学习模式的兴起，中国也有越来越多的学校开始尝试BYOD。我尚未有条件对所有实施BYOD的学校决策者做全面调研，但从与几所实践BYOD的学校领导的交流来看，主要也是现实因素使然，不过不同于美国中小学因为经费方面的限制，中国的这些试点学校大多是出于场地方面的考虑。以您2015年参观过的杭州市江干区采荷第三小学为例，学校实施BYOD的直接原因在于学生数量的增加，另外，由于校区规模有限，无法建设同步规模的计算机机房，因此，学校在得到家长委员会的支持后开始实施BYOD。当然，您提到的计算设备普及等技术条件的成熟也是实施这一模式的前提。不过从总体上来说，BYOD在中国还是少数先行者的探索实践，如果参照罗杰斯“创新扩散模型”，我的判断是它还处于了解阶段，即“革新者”使用的阶段。并且在使用的学校层次上，还是以小学和初中为主，主要是3～6年级。   <strong>霍伊特·汉普希尔：</strong>用“创新扩散模型”分析与对比不同国家的应用阶段十分有意思。从技术成熟度来说，BYOD在美国中小学同样是一个新事物，如果参考“创新扩散模型”，应该是处于兴趣阶段的初期，也就是“早期采用者”开始探索尝试的阶段。也就是说，在美国实施BYOD的中小学校尽管有很多，但都还处于比较初级的阶段，对于BYOD所面临的一些挑战与困难仍缺乏比较成熟的应对方案。但与中国不一样的是，美国采纳BYOD的中小学校在学段分布上并没有十分明显地集中于哪个学段，这可能是因为使用技术设备已经成为美国中小学课堂中的常态，自带设备也成为美国中小学生重要的学习工具。</p>
+<hr>
+<p>  从总体上来说，BYOD在中国还是少数先行者的探索实践，如果参照罗杰斯“创新扩散模型”，我的判断是它还处于了解阶段，即“革新者”使用的阶段。并且在使用的学校层次上，还是以小学和初中为主，主要是3～6年级。</p>
+<hr>
+<ul>
+<li><strong>BYOD的设备来源及形态</strong>             <a href="http://www.ilester.net/wp-content/uploads/2016/05/4-2.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/4-2-300x248.png" alt="4"></a>   <strong>阮高峰：</strong>我在2013年随您到美国伊利诺伊州布希奈尔（Bushnell,Illinois）调研时，也参观了当地一所实施BYOD的中学，我发现那所学校将iPad作为BYOD设备。请问美国中小学在实施BYOD时，比较倾向于哪些形态的计算设备？又是如何实现设备既符合教学需求，也方便学校维护和管理的？   <strong>霍伊特·汉普希尔：</strong>美国中小学使用的BYOD设备，主要有两个来源：一是家长为学生配置的计算设备。因为对于设备采购，不同家庭有不同的预算、使用习惯甚至审美偏好，所以设备形态与型号往往各异。二是学校与一些大公司或财团支持的公益机构合作，由这些机构购置设备并与家长签订合约，供学生在读书期间免费使用。2013年，我们访问的布希奈尔－普莱利中学（Bushnell Prairie High School）采用的是第二种模式，其中的iPad由机构提供，学校要另筹预算进行教学环境的创设，主要是校园无线网络建设、移动充电车的配置，以及统一购置教学需要的应用程序（APP），由于学生数量十分巨大，所以学校在教学应用及其管理软件的投入上往往也比较巨大。   对于学校而言，出于维护与管理上的方便，在BYOD设备的选型上，一般都倾向于那些易于维护的“轻应用”设备，包括iPad之类的平板电脑以及Chrome OS的笔记本电脑，因为这些设备大多引入了沙盒（也叫沙箱，英文sandbox。在计算机领域指一种虚拟技术，原理是通过重定向技术，把程序生成和修改的文件定向到自身文件夹中。当某个程序试图发挥作用时，安全软件可以先让它在沙盒中运行，如果含有恶意行为，会禁止程序的进一步运行，而这不会对系统造成任何危害）的机制，这使得设备较之传统的PC可以更少地受到病毒和恶意程序的感染。此外，在软件的选择上，出于信息共享与交互的便利，学校也更倾向于采用移动应用或是基于云计算的解决方案，如用Google Works教育版代替微软的Office套件、用Pixlr.com代替PhotoShop进行简单的图形处理。当然，对于与计算机相关的学科的教学，学校还是少不了使用传统的计算机机房、采用专业软件开展教学。不知道中国学校的采纳情况是怎样的？</li>
+</ul>
+<hr>
+<p>  和美国中小学校将BYOD作为持续投入的项目的模式不同，中国的BYOD实践更具有一次性投资的性质。并且将学校和家长的总体投入加起来可以发现，几乎所有的投入都花在硬件设备上，至于软件方面的投入，主要还是用于实施教学的公共服务软件，如实施翻转课堂的学习管理系统等</p>
+<hr>
+<p>  <strong>阮高峰：</strong>在中国实施BYOD的中小学校中，设备主要还是由学生家长自行采购，但在设备形态上会按照学校的要求与建议，如iPad之类的平板电脑是经常被选用的计算设备，但是选择笔记本电脑的学校所占比例更高。可能是因为笔记本电脑在计算性能上更有保障，工艺的改进也使其便携性能让学生和家长接受。而移动教学在中国也是最近几年刚刚兴起，适合在课堂情境中使用的本土教学应用尚不够丰富，教师在技术进课堂后实施教学和管理学生的技能也有待于在实践中慢慢积淀、磨砺，这可能也是学校选择笔记本电脑作为BYOD的另一个重要原因。至于像采荷第三小学这样BYOD设备还要作为信息技术课程教学环境的学校，笔记本电脑几乎就是必然的选择了。   和美国中小学校将BYOD作为持续投入的项目的模式不同，中国的BYOD实践更具有一次性投资的性质。并且将学校和家长的总体投入加起来可以发现，几乎所有的投入都花在硬件设备上，至于软件方面的投入，主要还是用于实施教学的公共服务软件，如实施翻转课堂的学习管理系统等。学校购买软件授权安装于家长提供的计算设备，当前还未有所闻。当然，学校一般都会指派教师或专门的技术人员对家长和学生进行指导，从而使设备的系统配置达到教学的需要。至于软件的形态，几乎清一色的Windows操作系统加相应的本地应用程序，SaaS（Software as a Server，软件即服务）模式的云计算应用比例总体较低，但一些优质的在线应用已开始在特定的教学环节得到采纳。另外，在对BYOD设备的集中管理与维护方面，中国尝试BYOD的中小学校中使用专用的移动设备管理（Mobile Devices Managment)系统的还比较少，软件分发、系统配置等技术维护工作主要还是以人工的方式分别进行，因此运维上的压力更大，特别是需要账户授权的使用情境，如在平板电脑的应用市场中安装APP时，这一现象尤为突出。</p>
+<ul>
+<li><strong>BYOD在中美两国学校的应用形态对比</strong></li>
+</ul>
+<p>  <strong>阮高峰：</strong>BYOD归根到底只是学校教育信息基础设备建设的一种方案，从这个意义上来说，终端用户，也就是学生实际上是透明的，就好像我们在喝水时可以只关注喝水这一行为本身，而对于水是来自直饮自来水龙头，还是来自矿泉水桶都可以暂且搁置一样。所以，影响学校在未来BYOD应用中决策的关键因素，在于这一模式是否可以满足学校教育信息化的需求，能否给学生带来真正的学习绩效提升。您指导或考察过很多实施BYOD的美国中小学校，能否介绍一下美国的教师是如何在教学中使用这些BYOD设备的？您觉得BYOD设备进入课堂后，会对哪些教育教学活动有提升？</p>
+<hr>
+<p>  BYOD也成为教师分发教学资源的重要形式。美国的纸质书十分昂贵，如果一门课程用到多本参考书目，悉数购置不管对学校还是对家长，都是不小的压力。</p>
+<hr>
+<p>  <strong>霍伊特·汉普希尔：</strong>BYOD进入学校后，事实上课堂已经实现了G1∶1所追求的一位学生一个计算设备的条件。首先，它可以作为辅助学生学习的一个认知工具来改进学生在课堂上的学习，如在布希奈尔中学，拥有iPad的学生可以借助函数绘制软件自己动手探索尝试，更加直观地对比函数中不同变量对图形的影响。其次，BYOD也成为教师分发教学资源的重要形式。美国的纸质书十分昂贵，如果一门课程用到多本参考书目，悉数购置不管对学校还是对家长，都是不小的压力。但现在越来越多的出版社开始提供相对便宜的电子版本授权，甚至可以采用租借的方式。而且电子书更新成本更低，内容可以随时更新，对于像计算机科学学科一样的教学主题，在内容的时效性上更有保障；此外，当学生拥有这类设备后，教学不再只是学校围墙之中的行为，而是在课堂教学时间之外，在家庭情境中依然可以发生。这样，学生有了更大的自由度组织与规划自己的学习，同时，借助特定目标与课堂契约，学生也可以锻炼自我管理能力，承担起对自身学习的责任。再次，借助特定的教学互动平台，这些设备的联网特性使得学生、教师甚至家长都可以参与学习的过程，对于学校和教师而言，这类解决方案的引入，使得学生作品的递交、归档和个别化批阅更加方便，而给予不同学生不同的评价反馈，是实施个别化教学的重要途径。从美国目前的实践来看，无论是在课堂上使用自带设备，还是在课外以“翻转课堂”模式为代表的探索，都不缺少这方面成功的案例，我想在中国学校的情况应该也是类似的。   <strong>阮高峰：</strong>是的。在中国的BYOD实验学校，计算设备同样扮演着课堂上辅助学习和课后拓展学习时空的角色。不过，在中国的应用情境中，学生在课堂上在教师的指导下使用计算设备的形式占据着主要的部分，原因在于：一方面，中国的教育一贯比较关注教师的讲授，学生自主探究、进行发现式学习在学校教学时间中的总体比重并不高；另一方面，一直以来，中国的教师和家长对学生是否能合理、负责任地使用技术设备始终心存顾虑，以至于在很多学校中，学校、教师和家长都在人为地创造一些障碍来阻止学生使用技术设备，而这又可能会反过来制约学生数字素养（Digital Literacy）的提升。所以在我调研的实施BYOD的学校中，教师通常会花很多精力对学生进行引导与培训，指导他们合理、负责任地使用数字技术，有点类似于美国共同核心标准（Common Cores）中的数字公民素养教育。在访谈中，大多数教师反映，BYOD班级的学生，在数字素养上较之其他学生有明显的提升。当然，即便是在这些学校中，学生也不是常态地使用这些设备，通常的模式是由教师决定哪些课时以怎样的形式来使用这些设备，并提前一两天告知学生将设备携带至学校。从这个意义上说，中国的中小学校对BYOD的应用总体上还处于探索与观望的阶段，教师、教育管理者与家长对其还处在摇摆状态。</p>
+<ul>
+<li><strong>实施BYOD的挑战与建议</strong></li>
+</ul>
+<p>  <strong>阮高峰：</strong>在企业应用领域，BYOD也随着采纳范围的扩大而遭受到一些如机密信息流失等的质疑，在教育教学的情境中，教育本身并不存在高保密级的信息，所以这方面的担忧可能不会引起学校管理者的困扰。您觉得BYOD要在中小学校获得更大范围的普及，主要存在哪些方面的挑战？   <strong>霍伊特·汉普希尔：</strong>当然，BYOD的应用在带来机遇的同时，也会带来新的挑战。首先，BYOD设备中应用程序的维护问题。对于iPad而言，现在已经有比较成熟的移动设备管理系统，可以借助专用服务器对进入联网范围的设备进行批量的自动部署、升级或卸载；对于桌面计算机，如Windows PC而言，当然也可以借助区域控制器进行统一的软件分发管理，但这个问题主要的挑战在于具备移动计算设备管理技能的专业人员的问题。我在中国杭州的那所小学里看到，学科教师在使用BYOD实施教学的时候，教室中还有一个技术支持人员，这自然是一种很好的解决方案，但美国的很多学校显然不具备这样的条件。即使在中国，当BYOD进入广大农村学校的时候，学校是否也可以配备同样的专业技术人员，也是一个问题。其次，关于课堂教学是否会偏离课程设定目标的担忧。在BYOD进入课堂之后，学生的关注点或多或少会被技术设备本身的诱惑所吸引，这种情况在美国这种缺少全国统一的教学大纲指导、在课程教学目标设定上给予教师极大自由度的教育体制下会更加突出，一旦出现一段时间后教学目标与学区督学的期望不相一致的情况，学校和教师会不可避免地感到挫败。因此，BYOD的应用效果极大地倚重于教师在技术支持的教学环境中设计教学，引导、管理与激励学生的方法与技能，这就回到了第三个问题，面对BYOD，教师是否已经做好了准备。</p>
+<hr>
+<p>  对于学校和教师而言，既不要神化也不要刻意回避BYOD，无论是源于学校购置还是源于家长或公益机构提供，在教育教学的情境中，设备始终是设备，关键在于我们的教师能否将它们通过合理的设计，以富于创意的方式整合进日常的课堂教学环节中，帮助学生架构桥梁，到达知识的彼岸。</p>
+<hr>
+<p>  <strong>阮高峰：</strong>这些困难在中国的情境中也或多或少地存在。在对偏离课程教学目标的担忧问题上，由于中国采用的是自上而下的教育决策体系，教学目标，甚至部分教材的选用都由教育部、各省市教育管理部门进行了清晰、明确的规定，同时中国历来重视考试评价，加上计算设备只是出现在部分的教学课时而非常态化使用，情况会好一些。但在设备管理问题上，中国的中小学校面临的挑战会更大一些，特别是那些采用笔记本电脑作为设备形态的学校，由于家长购置的设备在型号、配置、操作系统版本上均有差异，所以设备的管理和维护十分困难。在当前的试点学校中，设备维护主要是通过信息技术教师代为管理或采用购买外包服务的方式人工维护，这制约了BYOD在更大范围普及的速度；对教师在BYOD环境中教学设计与实施能力方面的挑战，在中国同样十分严峻，但教育行政部门对这个问题十分重视，并正在实施面向全国教师的“信息技术教育应用能力提升工程”，希望能对这一问题有所改进。相比美国，在中国实施BYOD还面临另外两个挑战：一是学生的数字素养，二是家长的态度。学校要利用技术设备实施有效的教学，必然需要学生对技术设备有正确的认知理解，并具备操作、使用习惯和自我管理能力，同时也需要家长的理解与支持，对于BYOD也是如此。   总的来说，在中小学实施BYOD的优势有很多，挑战也不少，对当前正在实践或有意加入BYOD实践的学校或教师，您有什么建议吗？   <strong>霍伊特·汉普希尔：</strong>考虑到未来移动互联网技术与计算设备的进一步普及，我们有理由相信这些技术会对教育领域中的课程、文化和支持体系产生重大的影响，而BYOD是推动技术支持下的教学的一种不错的解决机制。当然从总体上来看，无论是美国还是中国，BYOD都还是一个新生事物，它带来的挑战也不可能在一夜之间解决。但我觉得教育管理部门、家长还是应该给予这一模式足够的耐心和时间来使其证明自身的优势与价值。   对于学校和教师而言，既不要神化也不要刻意回避BYOD，无论是源于学校购置还是源于家长或公益机构提供，在教育教学的情境中，设备始终是设备，关键在于我们的教师能否将它们通过合理的设计，以富于创意的方式整合进日常的课堂教学环节中，帮助学生架构桥梁，到达知识的彼岸。</p>
+<p>  编后：2015年10月，本刊曾刊发过黎加厚教授与王竹立教授关于学生自带设备进课堂的讨论的文章。新年伊始，我们继续关注BYOD的话题，将焦点集中在中美两国中小学校自带设备应用现状的比较上，以期帮助读者更深入、更全面地了解BYOD。</p>
+<h3 id="对话背后的故事"><a href="#对话背后的故事" class="headerlink" title="对话背后的故事"></a><strong>对话背后的故事</strong></h3><blockquote>
+<p>  在和霍伊特·汉普希尔教授这场越洋对话的过程中，我的内心始终充满着感动和愧疚。因为霍伊特，这位65岁的老人，是在手术后未完全康复的情况下，完成了这场对话。   霍伊特和我，以及和“BYOD”这个主题有着密切的联系。在2013年访问美国西伊利诺大学时，我在自己的访学计划中列出了很多自己感兴趣的主题，“BYOD”就是其中之一，巧合的是，这正好也是霍伊特近几年所关注的研究主题。正是因为这一机缘，我得以有机会在霍伊特的带领下去亲身感受美国的BYOD实验学校。在那之后不久，霍伊特访问中国期间，我也带他到杭州市实施BYOD的实验合作学校参观。在那之后的一年里，他和我花了整整三个月的时间分析和比较中美BYOD实践的异同点，这份跨文化比较的研究报告最终发表在AECT（美国教育传播技术协会）的2014年年会上。   因此，当《中国信息技术教育》杂志的编辑邀请我参与关于BYOD主题的对话，并希望我邀请另外一位专家参与这场对话时，我首先就想到了霍伊特，而他也欣然应允。但当杂志社正式启动这个对话的时候，我陷入了两难中。没错！霍伊特刚刚做完一个手术，但他还是欣然地表示愿意继续参与这场对话。之后的几周时间，拟提纲、交流、摘录、审校等工作断断续续地进行着，然而我的内心依然矛盾，既有细细打磨之心，又希望一切早点结束。   在今天这场对话结束的时候，我只想隔着夜空说一句：“霍伊特，谢谢你，早日康复！                               ——阮高峰</p>
+</blockquote>
+<p>原文： <a href="http://www.ilester.net/wp-content/uploads/2016/05/校园BYOD的契机与挑战_中美两国中小学校自带设备应用现状比较_霍伊特汉普希尔_阮高峰.pdf" target="_blank" rel="noopener">校园BYOD的契机与挑战<em>中美两国中小学校自带设备应用现状比较</em>霍伊特汉普希尔_阮高峰</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2016/05/translation-201605132/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lester Ruan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="信息技术教育应用">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/05/translation-201605132/" itemprop="url">学生视角的课堂观察实践</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-13T18:42:54+08:00">
+                2016-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/翻译作品/" itemprop="url" rel="index">
+                    <span itemprop="name">翻译作品</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>原文： <a href="http://www.ilester.net/wp-content/uploads/2016/05/KindtPeerSpectives.pdf" target="_blank" rel="noopener">KindtPeerSpectives</a> 以下为浙江师范大学本科毕业设计(论文)外文翻译。译者：李锋;校译：阮高峰。</p>
+<blockquote>
+<p>当我第一次在一个宣传视频上看到一个自行车越野赛车手带着GoPro摄像机时，考虑到它站在学生和老师的角度上观察课堂的巨大优势，我马上想到了它在课堂里的应用。Hindmarsh,Heath和Luff（2010）描述了2个观点：1）固定的（静止的）机位，给画面提供了一个持续的，相对不引人注意的视角。2）不固定的（手持的）参与者视角，可以精确记录现场的特殊情况（pp.38-40）我回想起使用固定机位的相机发现学生的焦虑和参与情况的关系的情 况（Kindt,1997)。这个视角帮助我增加了对课堂交互本质的理解，但是它并没有记录学生所看到的事物，显然，这个是GoPro相机的优势。</p>
+</blockquote>
+<p>            <a href="http://www.ilester.net/wp-content/uploads/2016/05/图片1-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/图片1-1-300x260.png" alt="图片1"></a>   我对这个摄像机的潜力很有信心，不久就预定了一个GoPro头戴式摄像机。在2010年的夏天，我在在第二个学期开学的时候将它应用到口语交流策略 （OCS)的课程。当我写这段文字的时候（11月下旬），我已经在口语交流策略（OCS）课程上从2个新生和2个二年级学生收集了约90分钟的9段 GoPro视频。</p>
+<h4 id="介绍GoPro相机"><a href="#介绍GoPro相机" class="headerlink" title="介绍GoPro相机"></a><strong>介绍GoPro相机</strong></h4><p>  像学生们介绍这个摄像机，我使用了在GoPro官网上看到的片段。   为了讨论夏令营活动，我展示了来自2个参与者自行车越野赛车手的视频片段，其中1个固定机位摄像，另1个头戴式摄像。然后我们讨论这两个视角的不同，并交流 我们可以在哪些场景用头戴式摄像机做有趣的事情。学生们建议夏令营活动比如“登山”、“做菜”和“坐过山车”等。然后我们还重点考虑了语言学习和在我们课 堂里的场景。   在我周密考虑这个想法以后，我向同学们展示了这个真实相机，并告诉他们我认为通过他们的眼睛看这个课堂会变得非常有意思，还能看到老师很少能够看见的事物。 然后我向他们询问了是否可以在课堂里使用这个相机和是否有志愿者愿意记录课堂。所有的4个班级都同意使用GoPro相机录像，而第一个志愿者也很快就产生了。</p>
+<h3 id="优势与不足的一些想法"><a href="#优势与不足的一些想法" class="headerlink" title="优势与不足的一些想法"></a><strong>优势与不足的一些想法</strong></h3><p>  经过GoPro相机9周的使用，我看到了一些它的优势和不足：</p>
+<h4 id="1）参与者的视角"><a href="#1）参与者的视角" class="headerlink" title="1）参与者的视角"></a><strong>1）参与者的视角</strong></h4><p>  我相信该相机最大的优势是记录活动参与者看到的场景，不管是老师还是学生的看到的（可以比较Photo2和Video capture 1）。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/图片2-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/图片2-1-300x115.png" alt="图片2"></a>   以前从来没有近距离看到学生看的，通过看见和听见一个学生和他的同学正在做的事情，我可以在了解学生情况的情况下，采取明智的教学策略。通过视频看 见在这几个班上大量的学生加强了这种观点。实际上，回顾这个视频的过程帮助我更好的了解个别学生和整个班级的状况。</p>
+<h4 id="2-录制讲授"><a href="#2-录制讲授" class="headerlink" title="2)录制讲授"></a><strong>2)录制讲授</strong></h4><p>  该摄像机对教学过程高质量的录制，和学生看到和听见相关。当我讲话的时候，声音被很清晰的记录下来，让我能够在课后检验我的教学语言。相机穿戴者的声音也被 很清晰的记录下来。GoPro摄像机到目前为止还没有外部的麦克风，所以它经常会难以听到穿戴者同伴间的交谈。要克服这个困难，可以要求同伴讲的声音更高 一点，座位距离他们更近一点或者使用IC录音机或者其他补充的录音设备。</p>
+<h4 id="3）记录教师行为"><a href="#3）记录教师行为" class="headerlink" title="3）记录教师行为"></a><strong>3）记录教师行为</strong></h4><p>  除了教师的语言，该摄像机可以记 录教师的行为。这对于教师检验他们的肢体语言、物理的移动、手势等等很有好处。当然这方面的研究，教师可以用固定机位的相机，或者更加高效的是由观察者或 助手手持摄像机。当然它可能在当探索学生究竟想干什么的时候，用GoPro摄像机检验教师的行为更加有用。</p>
+<h4 id="4）GoPro拍摄学生有一定压力"><a href="#4）GoPro拍摄学生有一定压力" class="headerlink" title="4）GoPro拍摄学生有一定压力"></a><strong>4）GoPro拍摄学生有一定压力</strong></h4><p>  一些学生评论GoPro摄像机好像老师的第三只眼，和老师在一样有压力。在邮件的反馈中，另一个学生写到：“我认为如果我们有一个相机在教室里，大多数学生 会更加认真，因为如果我们在教室里做坏事情，都会被这个摄像机看到！”这当然展示了该摄像机会一定程度上侵扰学生，可能会对他们的行为产生积极和消极的影 响。大多数学生提到摄像机确实让他们紧张，但是随着随后的使用，他们适应了它：“它真实有趣极了，甚至我忘记了我的同学在使用相机呀！它一点也不困扰我了。”</p>
+<h4 id="5）创新的影响"><a href="#5）创新的影响" class="headerlink" title="5）创新的影响"></a><strong>5）创新的影响</strong></h4><p>  另外一个介绍这个摄像机的好处是因为多层次创新的影响。一些学生说他们曾经看到这个摄像机被喜剧演员 用在很令人震惊的场景，并且他们也发现这是很有趣和独特的。当然，当学生认识到这个相机比想象中的更重还有头带比预想的要不舒适的时候，一些最初的热情也 有可能被激发。然而，在接下来的9周里面，新的穿戴者和同伴看上去很享受使用这个摄像机。这个摄像子也允许我探索新的可能性。虽然为了增加新技术的有效 性，第一次使用这些技术时的活动和材料不可避免的需要调整和修订。这并不能阻止创新技术或进程的应用。（Beck &amp; Kosink, 2006)一个值得注意的问题可能是存在着太多的创新，这些创新太频繁了以至于学生不能达成创造性的舒适水平，尤其是那些特别需要细致控制的活动。当然， 为每个班级创造一个一次性使用的材料是很费时的，所以教师需要在投资多少时间和精力上作出明智的判断。</p>
+<h4 id="6-逻辑问题"><a href="#6-逻辑问题" class="headerlink" title="6)逻辑问题"></a><strong>6)逻辑问题</strong></h4><p>  当时用GoPro设备，也存在着大量的逻辑问题需要教师额外的关注。视频文件需要成功的记录和储存。摄像机（参数）必须被合适的设置——使用可充电的电池和一个空的储存卡——并打开它。 选择志愿者，提供机会给所有的学生参与，并收集反馈的系统需要创建起来。这些任务没有一个是可憎的，但是它们确实耗费时间和组织。</p>
+<h4 id="GoPro应用"><a href="#GoPro应用" class="headerlink" title="GoPro应用"></a><strong>GoPro应用</strong></h4><p>  在使用GoPro摄像机的9个星期，我已经收集了一些由该摄像机提供的独特的视角的程序，活动和材料。在最开始的第一个班级，当我正在介绍这个相机的时候， 我打开GoPro相机在我第一次的解释中。这成为我在随后的课堂中展示的第一个记录。我本可以在第一个学生志愿者上使用视频，但是我认为把视频关注点放在 我自己的身上可以让学生对这个摄像机感到更加舒适，并更加的理解它的意义，它是怎么记录的，它是怎么被使用的。 第一个被GoPro摄像机记录的案例来源于一个最后几分钟的自我讲述通过2分钟的对话任务。这导致了一个转录！他提供了大量的知识点，包括语言和战略重点。因为GoPro数据可视化，我不仅可以检验学生说了什么，还可以知道参与者做了什么。             <a href="http://www.ilester.net/wp-content/uploads/2016/05/图片3-1.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/05/图片3-1-300x204.png" alt="图片3"></a>   在第四周，我用GoPro镜头聚焦手势和表情的使用.我萃取了个性化教师对于学生教学中3分钟关于自己演讲的摘录。学生与一个同伴在转录过程中出现的手势和 表情相匹配（Video capture 2）。它出现了几大的兴趣在学生自己的课堂里记录，实际生产，是发生在他们的最近发展区里面(ZDP) (参见 de Guerrero &amp; Villamil, 2000; Vygotsky, 1978)，让他们更容易去达到与完成。</p>
+<h4 id="未来的方向："><a href="#未来的方向：" class="headerlink" title="未来的方向："></a><strong>未来的方向：</strong></h4><p>  对于GoPro摄像机出现了很多可能性的应用。在这学期结束前，我已经拥有了6个90分钟的视频，希望能够用上 NVivo 9（进行分析）（Richards, 2010），这是一种定性的数据分析软件（QDAS），帮助组织和分析数据量比较大的数据。一些可能研究的领域包括：   1）探索专注于矫正教师和学生期望的有困难的任务的途径   2）涉及更多学生时分析课堂   3）设计更深入的调查问卷和开放式访谈去理清学生的经历   4）探索该摄像机的影响   5）记录教师在随后的课程中看视频时候的回忆和自我反思</p>
+<h4 id="最后的思考："><a href="#最后的思考：" class="headerlink" title="最后的思考："></a><strong>最后的思考：</strong></h4><p>  虽然还有一大堆关于它的成就的问题，包括花费，逻辑 关注，学生舒适，更大课程的参与，与其他技术的整合。但对于新观点，从这个革命性的摄像机中，它还是有巨大的潜力的，尤其是它所提供的参与者视角。和所有的创新一样，还将有一段实验发展的阶段用于发现更多高效的和有影响力的方法。我的观点是:GoPro头戴式摄像机将在协作学习，材料发展，学生动机，教师 教育和其他课堂研究领域引领出新的可能。我期望，在未来，该产品有更多轻量的音质较高的版本能够变成教师观察和发展的工具。</p>
+<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a><strong>参考文献</strong></h4><p>Beck, C., &amp; Kosink, C. (2006). Innovations in Teacher Education: A Social Constructivist Approach. Albany, NY: State University of New York Press. de Guerrero, M. C. M., &amp; Villamil, O. S. (2000). Activating the ZPD: Mutual scaffolding in the L2 peer revision. The Modern Language Journal, 84(1), 51-68. GoPro. (2010). Retrieved November, 13, 2010, from <a href="http://www.gopro.com" target="_blank" rel="noopener">www.gopro.com</a> Hindmarsh, J., Heath, C., &amp; Luff, P. (2010). Video in Qualitative Research. Los Angeles: SAGE Publications. Kindt, D. (1997). Understanding instructions survey: Less anxiety, more interaction. Paper presented at the On JALT96: Crossing Borders. Richards, T. (2010). NVivo 9. Melbourne: QSR International. Retrieved November, 15, 2010, from <a href="http://www.qsrinternational.com" target="_blank" rel="noopener">www.qsrinternational.com</a> Vygotsky, L. S. (1978). Mind in Society: The Development of Higher Psychological Processes. Cambridge, MA: Harvard University Press.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2016/05/translation-mobile-learning-tendencies-and-lines-of-research/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -325,155 +885,21 @@
 
       
         
-          
-            <p>原文： <a href="http://www.ilester.net/wp-content/uploads/2016/05/Mobile-Learning-Tendencies-and-Lines-of-Research.pdf" target="_blank" rel="noopener">Mobile Learning Tendencies and Lines of Research</a> 以下为浙江师范大学本科毕业设计(论文)外文翻译。译者：施海霞;校译：阮高峰。</p>
+          <p>原文： <a href="http://www.ilester.net/wp-content/uploads/2016/05/Mobile-Learning-Tendencies-and-Lines-of-Research.pdf" target="_blank" rel="noopener">Mobile Learning Tendencies and Lines of Research</a> 以下为浙江师范大学本科毕业设计(论文)外文翻译。译者：施海霞;校译：阮高峰。</p>
 <blockquote>
 <p>摘要：随着移动技术在各类社会群体中广泛存在，其在教育领域的应用也在稳步增长。本文提出了一种移动学习的新概念，旨在阐述这种方法的可能性，并确定其发展趋势。</p>
 </blockquote>
-<p>  为此，本文内容着重于三个关键方面：教学用途、教学标准和研究路线。文章从关键概念的定义着手，分析设备的功能特点，解决个人应用的教学影响。其次，我们将探讨移动学习(mLearning)的教学标准和资源整合，介绍其与不同教育理论的连接，我们将基于此种方式建立开发活动时应遵循的准则。最后，我们将提出研究的主线，尤其侧重于欧洲和西班牙。作为一个闭环，我们将提出一系列用来改善移动学习发展的结论和建议，作为教育解决方案。   目前，对于移动终端在教学领域的应用可能性的研究，尤其是侧重于教育的发展框架，用以制定出一个合适的教学方法。本文旨在反映这一增长趋势。 <strong>类别与和主题描述</strong> <strong>K.3.1 [计算机与教育]：</strong>计算机在教育中的应用——计算机辅助教学、远程学习。 <strong>概述</strong> 理论，设计。 <strong>关键词：</strong>移动学习，在线学习，教学应用，教学原则，流动性，信息通信技术，发展趋势，研究教育</p>
-<h4 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a><strong>1.引言</strong></h4><p>  信息和通信技术在教育领域的应用（以下简称ICT）是不断变化的，与快速的技术发展有关。技术创新的影响，反而在网上培训领域较大，不断要求直接方法论改变[9]。在过去10年里，我们看到了新的相关概念已经出现，并产生了较大的影响，如在线学习、混合学习(bLearning)或者是本文主要阐述的移动学习(mlearning)等。   移动学习的出现是由于移动终端在社会各阶层的成功应用，并开始探究将这些资源用于教育的可能性。它位于在线学习的范畴内，正越来越多地用于教育解决方案，目的是让学习的过程不受时间和空间的限制。   随着越来越多的研究从教学和技术的观点出发，移动学习在过去几年中经历了快速的发展。在本文中，我们提出移动学习作为一种教育方法和领域的现状展开研究。   本篇文章分为五个部分。 在第一部分中，我们将建立移动学习的概念框架。 我们将继续分析可用于移动学习使用设备，分析这种模式的教学和教育影响 第四部分描述移动学习研究的方向，主要以欧洲和西班牙为例。 最后，在第五部分中我们将提供一系列派生的结论分析。</p>
-<h4 id="2-移动学习的内涵"><a href="#2-移动学习的内涵" class="headerlink" title="2.移动学习的内涵"></a><strong>2.移动学习的内涵</strong></h4><p>  移动学习与在线学习领域密切相关。在任何教学/学习过程都可以利用电子手段，因为学习过程中需要通过互联网，因为这已经成为发展远程教育的基本工具[11]。由于其技术创新的关系、在线学习已从传统学习中分离出来，从而产生新的方法，并试图获取最可靠的技术。正是在这样的背景下，游戏学习， 传统学习或移动学习的概念出现。   移动学习可以从多种方式解释，这取决于我们关注的元素 [46]：</p>
-<ul>
-<li><p>学习通过移动终端。</p>
-</li>
-<li><p>学习与学生都是在移动的。</p>
-</li>
-<li><p>学习通过移动内容。</p>
-</li>
-</ul>
-<p>  由于前人对移动学习的定义解释不同，且根据在线学习和移动学习之间的关系，现有移动学习的定义并不一样。   奎因[39]第一个移动学习的概念进行了解释，他将其定义为通过移动设备发生的在线学习。 这种理解可能会犯过分地以技术为中心的错误[48]。   奥马利等[29] 提出了一个更广泛的定义。考虑到在移动学习中，“学习者并不是在一个固定的、预先确定的位置学习，或者是学习发生时，学习者需要利用移动技术学习机会的。”这些研究者认为这两个条件只要满足一个，就属于移动学习。   佩特洛娃和李[2009]将移动学习定义为“一个无处不在的学习活动，发生在由一个使用适当的移动技术的移动设备支持，通过人与人的通信使用，支持用户界面操作和教学方法的使用”。这些作者不仅提到技术组件，而且也注重移动性，他们描述了移动学习的三个基本组成部分：硬件，接口和教学设计。   关于移动学习和教育领域，特拉克斯莱尔[49]指出，移动学习是“基于个人，环境，和情境化”，且已被归为非正式学习的领域中，这是其成为正式教育领域活动的巨大障碍。   在移动学习在正式教育活动中所扮演的角色的辩论中，有很多研究者认为它是正式学习的补充。有很多人，把它作为一种补充的存在为基础的学习。这也是Laouris和 Eteokleous[23]基于建构主义和对移动学习的潜能再激发的组织协作性活动的观点。   移动终端提供了很多学习者交流和自主工作可能性。因此，正式和非正式的学习之间的界限模糊，这使得传统的教学策略需要反思[45]。   移动学习的发展和教育进程日益扩大，将最终导致新的学习方法出现：随时随地发生的学习，即泛在学习。在这种学习方法中，学生发现自己处在一个永久的学习环境中，周围的学习元素，甚至学习都可以发生在不知不觉中[17]。   这样一来，移动学习就处于在线学习和传统学习之间。</p>
-<h4 id="3-哪一个是最合适的设备"><a href="#3-哪一个是最合适的设备" class="headerlink" title="3.哪一个是最合适的设备?"></a><strong>3.哪一个是最合适的设备?</strong></h4><p>  当涉及到确定哪些终端是易于被用于开发移动学习活动时，需要考虑移动设备内任何对象的处理器和内存数据输入和输出[40]，事实上，有大量的技术资源可供教师选择。   下面我们将介绍当前在教学中最常用的两个设备——智能手机和平板电脑。   如前所述，智能手机和平板电脑是最常用的分析设备。但是，事实上还有其他相关设备，详见于文献[21][36][44]。在文章“您准备好移动学习了吗?”[5]，科贝伊和巴尔德斯科贝伊对以下设备进行了全面的分析：</p>
-<ul>
-<li><p>Pod和mp4播放器：在教育中，主要用到的技术是下载和复制播客，以及相关的主题和类别的录音录像。也可以用来交换文件或创建课堂活动记录。缺点是缺乏可被用于互动沟通的选项非常少。</p>
-</li>
-<li><p>PDA(个人数字助理)：它可以用作用于音频，视频和Flash文件的再现的工具。此外,它还允许浏览互联网。不同于iPods，PDA支持协作学习，包括通信工具和文字处理器。 他的主要限制是相比于智能手机，他缺乏技术来处理互联网活动。</p>
-</li>
-<li><p>电子阅读器：电子书阅读器是用来存储和读取不同的文本。他们的设计和数字墨水屏幕的质量使其最适合的终端阅读。它们允许标注和记笔记，所以他们对课堂活动很有帮助。</p>
-</li>
-</ul>
-<p>  智能手机是常规的移动电话与袖珍PC结合使用[21]的小尺寸器件。它们提供互联网连接和广泛地从拟订文件和多媒体实现web 2.0活动功能。这种资源在过去的几年中快速增长使其取代了手机[6]。其主要优点是减少了大小、自主性，随时随地提供网络连接和处理器的能力。智能手机可以广泛地用于移动学习体验，从游戏的基础学习活动[2][13]到在线学习内容。   自2010年第一代iPad的发布以来，平板电脑在移动设备市场上迅速拓展。此资源组成的触屏，通常在7至10英寸之间，提供与计算机的相同功能，且其手持不需要额外设备。此款设备在移动学习活动的开发中尤其有用，有助于帮助克服其他小尺寸屏幕的技术设备的困难。这种技术允许放大移动学习的固有优势，便于信息的搜索和协商互动，并适应不同的学习风格[42]。   但在平板专用教育软件的开发上，仍存在着差距。在一项关于iPod上现有应用程序的教育潜能的研究中，来自宾夕法尼亚大学的穆雷和奥尔瑟斯的观点是，虽然这些设备的教育潜能毋庸置疑，但到目前为止，开发出来的软件并没有发挥这些设备的潜能。目前的重要进展，主要是苹果公司开发iTunes U的，一个专为平板电脑推出的内容细化和内容分发工具。   受欢迎的这两项技术作出了更多和更多的学校有兴趣实施它们[35]。   在学前阶段有些有趣的经历，如进行贝朔尔纳和和记电讯[1],他将利用平板电脑的教室。 这些作者探讨了各种可能性的iPads扫盲教学逐步通过复杂的应用程序,有助于4、5岁的儿童发展他们的口头和书面表达能力。 尽管提交人承认的局限性,他们的研究,它们突出了独特的功能,平板电脑提供的,特别是他们的社会组成部分。   和记电讯、贝朔尔纳和Schmidt-Crowford[15]已进行了一次类似的体验中心在初级教育的学生,他们也选择了iPads进行识字教学。 他们使用了不同的应用程序的活动,如独立的阅读活动(iBooks)、识别的主要和次要的思想在文本(Doodle Buddy)、可视化(Popplet)或确定的原因和影响(杂说明)。   香港[20]研究的可能性,这些移动终端在数学教学在小学一级。 他用这些终端发送信息的届会期间解决的问题通过与应用程序的交互和通信和课堂控制的工具。   还有其他的研究中学教育的学生，如由Mandula的Meda,Muralidharam Parupalli[24]，研究了各种将课程视频推送到学生终端的可能性，或由Kamaruzaman y Zainol[19研究的应用移动语言的智能手机可能性。</p>
-<h4 id="4-实现移动学习教育标准"><a href="#4-实现移动学习教育标准" class="headerlink" title="4.实现移动学习教育标准"></a><strong>4.实现移动学习教育标准</strong></h4><p>  除了构成一种新技术，移动学习还意味着一种新的方法，决定很多事情，从调整到终端和移动性的新教学资源的设计，到强调他们的教学原则。   为了正确地开发移动学习经验，有必要根据这种方法的特点调整内容和活动。这是唯一有效的措施，如果我们意识到了移动学习的潜力和局限性。   有很多的因素使我们提出移动学习在实践中形成的融合。我们想强调其中一些因素：   教学/学习过程的灵活性：正如我们在前面提到的，移动学习的主要优势之一是它能够打破时间和空间障碍，让学生随时随地采取学习工具[ 26 ]学习。</p>
-<ul>
-<li><p>鼓励协同工作：移动技术提供的通信能力有助于建立团队合作过程和提高创造力和个人之间的协作。它还可以帮助开发了评论家和沟通技巧的学生[31]。</p>
-</li>
-<li><p>即时性：移动学习允许直接应用和发布内容。这个特点由于移动设备的组合和web 2.0增强[38]。</p>
-</li>
-<li><p>多媒体：移动终端能够将教学/学习过程中多媒体内容整合。如果使用得当,它们是重要的元素动力[41]。</p>
-</li>
-<li><p>个性化：移动学习具有一个适应任何个人特征和背景的巨大能力[49]。</p>
-</li>
-</ul>
-<p>  虽然移动学习可以提供广泛的教育解决方案，但在设计自己的教学活动中仍会遇到问题需要克服。奥尔[32]总结了这些关键因素：</p>
-<ul>
-<li><p>技术难点：硬件和软件的特点进行一系列相关的限制(困难在阅读长文本,问题产生长文本由于文本输入法…)。虽然在新功能开发方面取得重大进展，但技术壁垒的问题仍然存在,限制了各种不同的活动。通过提供更大的屏幕尺寸和更多的自治权，平板电脑的外观在这方面已有重要的进步。</p>
-</li>
-<li><p>连接依赖：以便进行活动而对连接终端产生依赖，限制了移动性。</p>
-</li>
-<li><p>难以适应新的移动终端：手机替代品的数量和种类使我们有必要执行对材料的选择，以更适合他们。</p>
-</li>
-<li><p>学生分心：由于移动学习的性质，在移动教学/学习过程中经常发生在多任务环境下,学生的注意力集中可能会比较困难，使得这一学习进程遭到破坏。</p>
-</li>
-</ul>
-<p>  由于环境教育过程的发展，可能会存在数字排斥的风险。移动学习需要一定水平的技术知识，这可能会导致先进的用户有一定的优势。此外，较少的进阶用户可能会对此技术难住，望而却步或感到孤立[5] 。   虽然前面提到的一些因素是与技术相关的问题，但其中大部分是与教育方面有关，可以通过实施改进的教学设计活动解决[4]。移动设备到教学过程的整合，不仅取决于它总的贡献，而且在于他们的教育模式。Kadirire[18]揭露了移动学习是如何关系到行为主义和建构主义范式：</p>
-<ul>
-<li><p>行为主义范式：在本范例中会有通过使用文本消息，或刺激响应基于活动的强化系统消息发送后学生发送他的答案等活动。</p>
-</li>
-<li><p>建构主义范式：这种范式的学生成为自己的知识的建构者，即通过他们提供的移动设备和通信支助工具，积极的参与和协作。这类活动的最好的例子就是其中一组学生同时参与了学习模拟和活动。</p>
-</li>
-</ul>
-<p>  面对这两种范式，我们同意SCOPEO[44]的观点，移动学习建构主义范式内拥有一个更大的发展潜力，因为“它有利于社会互动建设的知识，同时让学生构建自己的重要学习支架”。针对移动技术在远程教育过程中的应用，我们将采取远程教育的事务理论作为参照物。该理论认为教学因素的差距取决于三个因素：程序的构建，老师和学生之间的互动，学习者的自主性[27]。   根据这一理论，我们可以将移动学习活动分成四类[34]：</p>
-<ul>
-<li><p>社会学习活动与高事务距离：它涉及到的活动，其中有学生，教师或机构，并且有高度结构化的内容和较高的心理距离。他们提出了一个工作组的工作方法，其中的互动主要发生在学生之间，并且老师有指导作用。</p>
-</li>
-<li><p>个人学习的活动和高交互距离：这些活动中也存在较高的心理距离的学生和老师或机构、和结构化的内容。在这种情况下，主要的交互发生在学习者和内容。 社会学习活动和低交互距离：它涉及到干预松散结构化的内容，干预学生和老师或者机构较远的心理距离。学习者通过小组合作解决问题，交互过程建立在自然的方式之上。</p>
-</li>
-<li><p>个人学习活动和低交互距离：这是一种松散结构化活动，基于教师和学习者之间的较远的心理距离。在这些活动中，学习者在学习过程中，常常与监控自己学习的老师,互动，以此根据自身的个性化需求来调整学习内容。</p>
-</li>
-</ul>
-<p>  根据前面提到的特点，我们认为移动学习的设计必须遵循以下的原则，来源自SCOPEO[44]、埃利亚斯[7]和富兰克林[8]：</p>
-<ul>
-<li><p>简短和直接的模块特性：由于硬件随时随地用于访问信息和采取最优势的可能性提供移动学习的特点，建议设计短期模块，大约五分钟。</p>
-</li>
-<li><p>灵活性和简单性：移动学习活动必须考虑用户之间的区别的技能以适应他们的能力。</p>
-</li>
-<li><p>可访问性和容错性：我们的活动有一个直观的界面，允许导航相关的错误整改，这一点很重要。</p>
-</li>
-<li><p>多媒体：由于模块持续时间短，集成多媒体元素的移动学习内容是一个非常重要的因素。</p>
-</li>
-<li><p>行动导向：移动终端没有反身介质；因此，教育过程的方法必须是实用的和直接的。</p>
-</li>
-<li><p>通信和可见性：使用移动技术的连接和通信能力进行协作活动，促进学习者分享他们的贡献。</p>
-</li>
-<li><p>不断重建和更新：该方面借鉴了对过去所用方法和内容。移动设备的发展非常迅速，它产生新的功能，可以使教学过程更加容易。</p>
-</li>
-<li><p>适应设备的特性：我们可以开发这类活动的条件类型。针对移动电话的活动设计与针对平板电脑不同，因为他们在硬件和软件条件两方面都存在着很重要的区别。</p>
-</li>
-</ul>
-<p>  为了能够正确地设计和开发移动学习活动，有必要确保教学机构采用适当的培训。当谈到培训这个教师队伍时，一系列的要求必须得到满足[43] ：</p>
-<ul>
-<li><p>适应环境不断的迅速的变化。</p>
-</li>
-<li><p>新技术知识和生产工具。</p>
-</li>
-<li><p>互动技巧。</p>
-</li>
-<li><p>教学技能。</p>
-</li>
-</ul>
-<h4 id="5-移动学习研究：从欧洲到西班牙"><a href="#5-移动学习研究：从欧洲到西班牙" class="headerlink" title="5.移动学习研究：从欧洲到西班牙"></a><strong>5.移动学习研究：从欧洲到西班牙</strong></h4><p>  根据调查的重点：技术、教育学和教育理论，在移动学习的研究路线可分为三大类[37]：</p>
-<ul>
-<li><p>研究重点技术：研究对象相关的移动设备的可用性和网络传输。</p>
-</li>
-<li><p>研究着重于教育理论：与实际应用程序有关的技术可能在教育理论。</p>
-</li>
-<li><p>研究着重于教育学：致力于材料的设计和评估。和他们的直接应用。 他们的工作具有有形的产品。</p>
-</li>
-</ul>
-<p>  在由这些研究者进行的各组内研究数目的演变的分析中，发现大部分的调查结果都属于专注于技术的研究组，虽然目前的趋势由其它两个组实施，特别是第三个，主要集中于减少的研究。   吴文雄等人[52] 在他们的研究证实了这一点，在分析164篇文章后，他们得出结论，大多数(58%)集中在移动学习的效果的评价。32%集中在移动学习系统的设计，调查情感领域5%，剩下的5%集中在评估学习者的特点。   特拉克斯勒[49]提出了一种不同的分类调查：</p>
-<ul>
-<li><p>移动学习中心在技术：在教育中引入技术创新，是用来衡量其技术可行性和教育机会的可能性。</p>
-</li>
-<li><p>微型化和便携式电子学习：它包括在适应移动终端之后，实施已经使用在网络学习环境中的解决方案。</p>
-</li>
-<li><p>课堂学习连接：要应用移动通信技术在课堂上支持协作学习。他们可能会连接至其他资源，如数字黑板。</p>
-</li>
-<li><p>个性化的移动学习：发展和应用帮助生产环境方面认识教育经验的方案。</p>
-</li>
-<li><p>移动培训：利用移动技术通过提供信息和即时支助满足他们的迫切需要，以提高工作性能。</p>
-</li>
-<li><p>在偏远和农村地区的移动学习：将移动学习应用于没有到达的传统在线学习经验的偏远地方。</p>
-</li>
-</ul>
-<p>  特拉克斯莱尔的大多数研究主题都围绕着成人教育，也和远程教育密切相关。   在欧洲，移动学习研究与发展开始于90年代的PDA持有量爆发。在这几年中，研究主要集中在技术（HandLeR）软件架构（MOBILearn）和服务门户（mLearning）的发展。   随着时间的推移，调查数量有所增加。在欧洲，这些调查的主要特点是，它们专注于教学影响的研究。受试者的研究已经多元化，包括以下[22]：</p>
-<ul>
-<li><p>学校中的移动学习：随着项目范围从已知的应用程序技术(Learning2Go)到对特定应用程序和方案的建立(PI y Let’s Go)。</p>
-</li>
-<li><p>高等教育中的移动学习：通常会比其他调查，如利用短信和学生沟通交流，播客录音(StudyLink)，涉及更多的参与者。也有学生做实习（ myPad项目）经验。</p>
-</li>
-<li><p>博物馆和非正式的情境中的移动学习：这些都是非正规教育背景的教育项目开发。大多数的项目使用智能手机作为通讯设备和接收和传输数据。</p>
-</li>
-<li><p>工作环境中的移动学习：整体集中在医学教学(Knowmobile Medimobile)和原位能力发展(个人移动助理)。</p>
-</li>
-</ul>
-<p>  虽然移动学习在西班牙仍然处于早期的发展阶段，但在公共部门和私营部门都有重要的经验，如Ferrovial公司的AENOR yASISA方案[44]。在正规教育也有一些试点进行，如电道项目，由CITA(提前调查技术中心)Penaranda de Bracamonte(萨拉曼卡)与CEO米格尔德利布日马科特拉合作开发。这个项目的目的是研究平板电脑在教室的使用 [3]。   通过自己制作的一个叫做Picaa的平台，费尔南德斯·洛佩斯，罗德里格斯，罗德里格斯门德罗斯和马丁内斯塞古拉[10] 研究关于在特殊教育中支持学生使用iPads实施的可能性，这一经验的成功激励例如平台的连续性和与其他特殊教育学校的项目合作。   也有在高等教育领域的其他例子，如UDIMA（马德里距离大学）进行的负责调查的学习中距离自用的iPad的经验 [50] 。   移动学习在西班牙最显著的案例发生在EOI(学校的工业组织)。 该方案已发展2009年以来，执教超过1000名学生。在第一个版本中，他们决定使用智能手机，但目前平板电脑已经取而代之，因为他们更好地适应移动学习的需求。   该方案是基于开源软件，虚拟校园，协作工具，Web 2.0的资源和社交网络的综合使用[47] 。   目前，我们可以发现以下在移动学习的研究趋势：</p>
-<ul>
-<li><p>定位学习：移动设备包含允许学生位置地理定位功能的应用程序设计 [30]。</p>
-</li>
-<li><p>严肃游戏：平板电脑和智能手机的屏幕分辨率和图形处理能力允许创建交互式教育游戏[25]。</p>
-</li>
-<li><p>增强现实(AR)：当前平板电脑和智能手机正在探索的另一个应用是其在AR活动中的使用。 AR通过设备的屏幕和摄像机的组合叠加超过实际元件的图像虚拟元件，因此允许这些元素和学生之间的相互作用。基于“增大化现实”技术一直在探索多样化的教育，从小学教育大学[14][33]。</p>
-</li>
-<li><p>互动图书：作为一个媒介，平板电脑的使用使得多媒体内容与互动教材互动活动的16]。</p>
-</li>
-</ul>
-<h4 id="6-结论"><a href="#6-结论" class="headerlink" title="6.结论"></a><strong>6.结论</strong></h4><p>  移动学习是一种新的深化网络学习的变化培训模式。最近的一种手段是基于快速增长和发展的移动技术能力，回应需要更灵活的教育过程。 对移动学习研究正处在发展的初期阶段，大部分调查工作主要集中在技术层面，而较少关注到教学内容。但是这一趋势正在随着更多从教学的角度做的调查出现被逐渐改变。   我们认为有必要重视教学研究，这样我们就可以制订更有效的教学方法与开发移动学习资源，正如我们在其他领域看到的一样，单纯的技术发展不会导致方法的改进。   联合国教科文组织[51]指出，有的国家对移动学习存在着一系列的社会偏见，在全球范围内,认为这些终端不适合学习。然而不同的经历已经证明了事实并非如此。心态的改变是必要的，使社会意识到这是一个合适的选择。   这一思想转变必须基于移动学习方案质量的改善项目，这取决于适当的教学方法的发展和素质教育活动的设计。</p>
-<h4 id="7-致谢"><a href="#7-致谢" class="headerlink" title="7.致谢"></a><strong>7.致谢</strong></h4><p>  我们要感谢卡斯蒂利亚 - 莱昂（西班牙）的各区域教育理事会的军政府通过GR 47项目和MPLE (ref. SA294A12-2)。最后，作者要为获得的支持感谢GRIAL的伙伴，<a href="http://grial.usal。" target="_blank" rel="noopener">http://grial.usal。</a></p>
-<h4 id="8-参考文献"><a href="#8-参考文献" class="headerlink" title="8.参考文献"></a><strong>8.参考文献</strong></h4><p>[22] Beschorner, B., and Hutchison, A., 2013. iPads as a Literacy Teaching Tool in Early Childhood. International Journal of Education in Mathematics, Science and Technology, 1, 1, 16- 24. [23] Camargo, M., Bary, R., Boly, V., Rees, M., and Smith, R., 2011. Exploring the implications and impact of smartphones on learning dynamics: The role of self-directed learning. In 17th International Conference on Concurrent Enterprising (ICE). [24]CITA, 2010. DEDOS: Tabletas digitales en el aula. July 30, 2012 from <a href="http://www.territorioebook.com/includes/descarga.php?id=../recursos/1298988498\_ProyectoDedos.pdf" target="_blank" rel="noopener">http://www.territorioebook.com/includes/descarga.php?id=../recursos/1298988498\_ProyectoDedos.pdf</a>. [25] Cochrane, T., 2012. Secrets of mlearning failures: confronting reality. Research in Learning Technology. 20, 123–134. DOI: <a href="http://dx.doi.org/10.3402/rlt.v20i0.19186" target="_blank" rel="noopener">http://dx.doi.org/10.3402/rlt.v20i0.19186</a>. [26] Corbeil, J.R., and Valdés-Corbeil, M. E., 2007. Are you Ready for Mobile learning? Educause Quarterly, 30, 2, 51- 60. [27] Dong-Hee, S., Youn-Joo, S., Hyunseung, C. and Khisu, B., 2011. Smartphones as smart pedagogical tools: Implications for smartphones as u-learning devices. Computers in Human Behavior, 27, 6, 2207-2214. DOI: <a href="http://dx.doi.org/10.1016/j.chb.2011.06.017" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.chb.2011.06.017</a>. [28] Elias, T., 2011. Universal Instructional Design Principles for Mobile Learning. International Review of Research in Open and Distance Learning, 12, 2, 143-156. [29] Franklin, T., 2011. Mobile Learning: At the Tipping Point. Turkish Online Journal of Educational Technology, 10, 4, 261-275. [30] Fernández Gómez, E., Baratech Ramírez, M., Fernández Izard, J.A., Lara Navarra, P., Rodríguez Vázquez, J.C., [30] Fernández Gómez, E., Baratech Ramírez, M., Fernández Izard, J.A., Lara Navarra, P., Rodríguez Vázquez, J.C., Sánchez Navarrete, L., and Vázquez Vega, A., 2009. ULearning. El futuro está aquí. RA-MA Editorial, Madrid. [31] Fernández López, A., Rodríguez Fórtiz, M.J., Rodríguez Almendros, M.L., and Martínez Segura, M.J., 2013. Mobile learning technology based on iOS devices to support students with special education needs. Computers &amp; Education, 61, 77-90. DOI: <a href="http://dx.doi.org/10.1016/j.compedu.2012.09.014" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.compedu.2012.09.014</a>. [32] García Peñalvo, F.J., 2005. Estado actual de los sistemas elearning. Teoría de la educación: educación y cultura en la sociedad de la información, 6, 2. [33] Germany, L., 2011. iTunes U: An opportunity for students. Campus - Wide Information Systems, 28, 3, 175-182. DOI: <a href="http://dx.doi.org/10.1108/10650741111145706" target="_blank" rel="noopener">http://dx.doi.org/10.1108/10650741111145706</a>. [34] Gopalan, A., Karavanis, S., Payne, T., and Sloman, M., 2011. Smartphone based elearning. In III International Conference On Computer Supported Education. [35] Hsin-Kai, W., Wen-Yu, S., Hsin-Yi, C., and Jyh-Chong, L., 2013. Current status, opportunities and challenges of augmented reality in education. Computers &amp; Education, 62, 41-49. DOI: <a href="http://dx.doi.org/10.1016/j.compedu.2012.10.024" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.compedu.2012.10.024</a>. [36] Hutchison, A., Beschorner, B., and Schmidt-Crawford, D., 2012. Exploring the use of the iPad for literacy learning. The Reading Teacher, 66, 1, 15–23. DOI: <a href="http://dx.doi.org/10.1002/TRTR.0109001090" target="_blank" rel="noopener">http://dx.doi.org/10.1002/TRTR.0109001090</a>. [37] Huang, Y.M., Liang, T.H., Su, Y.N., and Chen, N. S., 2012. Empowering personalized learning with an interactive ebook learning system for elementary school students. Educational Technology Research and Development, 60, 4, 703-722. DOI: <a href="http://dx.doi.org/10.1007/s11423-012-9237-6" target="_blank" rel="noopener">http://dx.doi.org/10.1007/s11423-012-9237-6</a>. [38] Jones, V., and Jo, J.H., 2004. Ubiquitous learning environment: An adaptive teaching system using ubiquitous technology. In Atkinson, R., McBeath, C., Jonas-Dwyer, D., and Phillips, R. (Eds), Beyond the comfort zone: Proceedings of the 21st ASCILITE Conference, 468-474. [39] Kadirire, J., 2009. Mobile Learning Demystified. In Guy, R. (Ed.) The evolution of mobile teaching and learning. Informing Science Press, Santa Rosa, California, 15-57. [40] Kamaruzaman, M.F., and Zainol, I.H., 2012. Behavior response among secondary school students development towards mobile learning application. In Proceedings of the 2012 IEEE Colloquium on Humanities, Science and Engineering (CHUSER), 589-592. DOI: <a href="http://dx.doi.org/10.1109/CHUSER.2012.6504381" target="_blank" rel="noopener">http://dx.doi.org/10.1109/CHUSER.2012.6504381</a>. [41] Kong, S.C., 2012. Using Mobile Devices for Learning in School Education. In Proceedings of the 2012 IEEE Seventh International Conference on Wireless, Mobile and Ubiquitous Technology in Education (WMUTE), 172-176 DOI: 10.1109/WMUTE.2012.39. [42] Korucu, A. T., and Alkan, A., 2011. Differences between mlearning (mobile learning) and e-learning, basic terminology and usage of m-learning in education. Procedia Social and Behavioral Sciences, 15, 1925-1930. DOI: <a href="http://dx.doi.org/10.1016/j.sbspro.2011.04.029" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.sbspro.2011.04.029</a>. [43] Kukulska-Hulme, A., Sharples, M., Milrad, M., ArmedilloSánchez, I. and Vavoula, G., 2011. The genesis and development of mobile learning in Europe. In Parsons, D.(Coord.), Combining E-larning and m-learning: New applications of blended resources. IGI Global, Hershey, 151- 177. [44] Laouris, Y., and Eteokleous, N., 2005. We need an educationally relevant definition of mobile learning. Retrieved July 30, 2013 from <a href="http://www.mlearn.org.za/CD/papers/Laouris%20&amp;%20Eteo" target="_blank" rel="noopener">http://www.mlearn.org.za/CD/papers/Laouris%20&amp;%20Eteo</a> kleous.pdf. [45] Mandula, K., Meday, S.R., Muralidharan, V., and Parupalli, R., 2013. A student centric approach for mobile learning video content development and instruction design. In Proceedings of the 15th International Conference on Advanced Communication Technology (ICACT), 386-390. [46] Masek, M., Murcia, K., and Morrison, J., 2012. Getting Serious with iPads: The Intersection of Game Design and Teaching Principals. Australian Educational Computing, 27, 2, 34-38. [47] Marcos, L., Lozano, A., and Tamez, R., 2009. Aprendizaje móvil y desarrollo de habilidades en foros asincrónicos de comunicación. Comunicar, 17, 33, 93-100. DOI: <a href="http://dx.doi.org/10.3916/c33-2009-02-009" target="_blank" rel="noopener">http://dx.doi.org/10.3916/c33-2009-02-009</a>. [48] Moore, M. G., 2007. The theory of transactional distance. In Moore, M. G. (Ed.), Handbook of distance education. Lawrence Erlbaum Associates, Mahwah, NJ, 89-105. [49] Murray, O., and Olcese, N., 2011. Teaching and Learning with iPads, Ready or Not? Techtrends, 55, 6, 42-48. [50] O’Malley, C., Vavoula, G, Glew, J.P., Taylor, J., Sharples, M., and Lefere, P., 2003. Guidelines for learning/teaching/tutoring in a mobile environment. Retrieved July 30, 2013 from <a href="http://www.mobilearn.org/download/results/guidelines.pdf" target="_blank" rel="noopener">http://www.mobilearn.org/download/results/guidelines.pdf</a>. [51] Oller, R., 2012. The Future of Mobile Learning. Retrieved September 30, 2013 from <a href="http://www.educause.edu/library/resources/future-mobilelearning" target="_blank" rel="noopener">http://www.educause.edu/library/resources/future-mobilelearning</a>. [52] Organista, J., and Serrano, A., 2011. Implementación de una actividad educativa en modo colaborativo con apoyo de smarthphones: Una experiencia universitaria. EDUTEC, Revista Electrónica de Tecnología Educativa, 36. [53] Orr, G., 2010. A Review of Literature in Mobile Learning: Affordances and Constraints, Wireless, Mobile and Ubiquitous Technologies in Education. In 6th IEEE International Conference, 107-111. DOI: <a href="http://dx.doi.org/10.1109/WMUTE.2010.20" target="_blank" rel="noopener">http://dx.doi.org/10.1109/WMUTE.2010.20</a>. [54] Parhizkar, B., Gebril, Z.M., Obeidy, W.K., Ngan, M.N.A., Chowdhury, S.A., and Lashkari, A.H., 2012 Android mobile augmented reality application based on different learning theories for primary school children. In Proceedings of the 2012 International Conference on Multimedia Computing and Systems (ICMCS), 404-408. DOI: <a href="http://dx.doi.org/10.1109/ICMCS.2012.6320114" target="_blank" rel="noopener">http://dx.doi.org/10.1109/ICMCS.2012.6320114</a>. [55] Park, Y., 2011. A Pedagogical Framework for Mobile learning: Categorizing Educational Applications of Mobile Technologies into Four Types. International Review of Research in Open and Distance Learning, 12, 2, 78–102. [56] Pegrum, M., Oakley, G., and Faulkner, R., 2013. Schools Going Mobile: A Study of the Adoption of Mobile HandheldTechnologies in Western Australian Independent Schools. Australasian Journal of Educational Technology, 29, 1, 66- 81. [57] Peters, K., 2007. m-Learning: Positioning educators for a mobile, connected future. International Review of Research in Open and Distance Learning, 8, 2. [58] Petrova, K., and Li, C., 2009. Focus and Setting in Mobile learning Research: A Review of the Literature. Communications of the IBIMA, 10, 26, 219-226. [59] Petit, J., and Kukulska-Hulme, A., 2011. Mobile 2.0: Crossing the border into formal learning? In Lee, M., and McLoughlin, C. (Eds.), Web 2.0-based e-learning: Applying social informatics. IGI Global, 192-208. [60] Quinn, C., 2000. Mlearning: Mobile, Wireless, In-YourPocket Learning. Retrieved July 30, 2013 from <a href="http://www.linezine.com/2.1/features/cqmmwiyp.htm" target="_blank" rel="noopener">http://www.linezine.com/2.1/features/cqmmwiyp.htm</a>. [61] Ramírez Montoya, M.S., 2009. Recursos tecnológicos para el aprendizaje móvil (mlearning) y su relación con los ambientes de educación a distancia: Implementaciones e investigaciones. Revista iberoamericana de educación a distancia, 12, 2, 57-82. [62] Rodrigo, R.L., 2011. Mobile teaching versus mobile learning. Retrieved July 30, 2013 from <a href="http://www.educause.edu/ero/article/mobile-teaching-versusmobile-learning" target="_blank" rel="noopener">http://www.educause.edu/ero/article/mobile-teaching-versusmobile-learning</a>. [63] Rossing, J. P., Miller, W. M., Cecil, A. K., and Stamper, S. E., 2012. iLearning: The future of higher education? Student perceptions on learning with mobile tablets. Journal Of The Scholarship Of Teaching &amp; Learning, 12, 2, 1-26. [64] Sandoval, E.A., García, R., and Ramírez M.S., 2012. Competencias tecnológicas y de contenido necesarias para capacitar en la producción de recursos de aprendizaje móvil. EDUTEC, Revista Electrónica de Tecnología Educativa, 39. [65] SCOPEO, 2011. M-Learning en España, Portugal y América Latina. Retrieved July 30, 2013 from <a href="http://scopeo.usal.es/sites/all/files/scopeom003.pdf" target="_blank" rel="noopener">http://scopeo.usal.es/sites/all/files/scopeom003.pdf</a>. [66] Sharples, M., Arnedillo-Sánchez, I., Milrad, M., and Vavoula, G. N., 2010. Mobile learning: Small Devices, Big Issues. In Balacheff, N., Ludvigsen, S., De Jong, T., Lazonder, A., and Barnes, S. (Eds.), Technology Enhanced Learning: Principles and Products. Springer, Heidelberg, Germany, 233–249. [67] Taylor, J., 2006. Evaluating Mobile Learning: What are appropriate methods for evaluating learning in mobile enviroments? In Sharples, M. (Ed.), Big Issues in Mobile Learning. University of Nottingham, 25-27. [68] Tíscar, L., 2011. Mobile learning EOI: Abriendo el aula. Retrieved July 30, 2013 from <a href="http://www.eoi.es/blogs/mlearning/files/2011/06/mlearning\" target="_blank" rel="noopener">http://www.eoi.es/blogs/mlearning/files/2011/06/mlearning\</a>_ eoi_2011.pdf. [69] Traxler, J., 2007. Defining, Discussing and Evaluating Mobile learning: The moving finger writes and having writ…. International Review of Research in Open and Distance Learning, 8, 2, 22-33. [70] Traxler, J., 2009. Current state of mobile learning in, Ally, M. (Ed.), Mobile learning: Transforming the Delivery of Education and Training. AU Press, Edmonton, 9-25. [71] UDIMA, 2010. La UDIMA explora las posibilidades docentes del iPad (Jul. 2010). Retrieved July 30, 2013 from <a href="http://www.udima.es/es/udima-explora-ipad.html" target="_blank" rel="noopener">http://www.udima.es/es/udima-explora-ipad.html</a>. [72] UNESCO, 2012. Working paper series on mobile learning. Retrieved July 30, 2013 from <a href="http://www.unesco.org/new/en/unesco/themes/icts/m4ed/mobile-learning-resources/unescomobilelearning»series/" target="_blank" rel="noopener">http://www.unesco.org/new/en/unesco/themes/icts/m4ed/mobile-learning-resources/unescomobilelearning»series/</a>. [73] Wen-Hsiung, W., Yen-Chun, W., Chun-Yu, C., Hao-Yun, K., Che-Hung, L., and Sih-Han, H., 2012. Review of trends from mobile learning studies: A meta-analysis. Computers &amp; Education, 59, 2 (Sep. 2012), 817-827. DOI: <a href="http://dx.doi.org/10.1016/j.compedu.2012.03.016" target="_blank" rel="noopener">http://dx.doi.org/10.1016/j.compedu.2012.03.016</a>.</p>
-
-          
+<p>  为此，本文内容着重于三个关键方面：教学用途、教学标准和研究路线。文章从关键概念的定义着手，分析设备的功能特点，解决个人应用的教学影响。其次，我们将探讨移动学习(mLearning)的教学标准和资源整合，介绍其与不同教育理论的连接，我们将基于此种方式建立开发活动时应遵循的准则。最后，我们将提出研究的主线，尤其侧重于欧洲和西班牙。作为一个闭环，我们将提出一系列用来改善移动学习发展的结论和建议，作为教育解决方案。   目前，对于移动终端在教学领域的应用可能性的研究，尤其是侧重于教育的发展框架，用以制定出一个合适的教学方法。本文旨在反映这一增长趋势。 <strong>类别与和主题描述</strong> <strong>K.3.1 [计算机与教育]：</strong>计算机在教育中的应用——计算机辅助教学、远程学习。 <strong>概述</strong> 理论，设计。 <strong>关键词：</strong>移动学习，在线学习，教学应用，教学原则，流动性，信息通信技术，发展趋势，研究教育<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/05/translation-mobile-learning-tendencies-and-lines-of-research/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
@@ -1413,470 +1839,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2016/04/qa-wechat-group-100limit-surpass/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lester Ruan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="信息技术教育应用">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/04/qa-wechat-group-100limit-surpass/" itemprop="url">Q&A: 微信群人数超过100人后如何再加人？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-29T09:51:22+08:00">
-                2016-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/工作室动态/" itemprop="url" rel="index">
-                    <span itemprop="name">工作室动态</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="问"><a href="#问" class="headerlink" title="问"></a>问</h3><p>网友“永言好味道”：阮老师，向你请教一个问题。微信群超过一百人后需要去办什么手续，使得微信群能加更多的人?</p>
-<h3 id="答"><a href="#答" class="headerlink" title="答"></a>答</h3><p>老师好，微信群超过100人后还可以继续添加好友的，但是增加了一些新的限制条件，说明如下：</p>
-<ul>
-<li>群超过100人，不能再通过扫描二维码的方式。只能通过群主邀请的方式加入新群友（群主辛苦了，你得先将他们先加为好友）；</li>
-<li>群主邀请后，他人也不能自动成为群成员。首先，对方需要绑定银行卡才能加入；其次，群主邀请后，对方会收到一个邀请请求，只有对方同意加入后才可以加入群聊。</li>
-</ul>
-<p>总的来说，相比较QQ群，微信群设定的限制还是比较多的。但也许鼓励信任的人际交往圈正是微信不同于QQ的设计哲学。</p>
-<hr>
-<p>问答是我们自2016年起开设的新栏目，如果您有教育信息化应用方面的疑惑与问题，欢迎递交。我们会协调我们的专家网络，尽力给您解答。咨询方式：</p>
-<ul>
-<li>电子邮件：<a href="mailto:limx@ilester.net" target="_blank" rel="noopener">limx@ilester.net</a> （李同学）</li>
-<li>新浪微博：请用<a href="http://weibo.com/zjlester" target="_blank" rel="noopener">@iLester</a> 或 <a href="http://weibo.com/TechStar?is_all=1" target="_blank" rel="noopener">@ICT教育应用</a> 向我们提问（恕不接受私信咨询，请谅解）。</li>
-<li>微信公众号：您可以查找搜索以下微信公众号：mlearning（或扫描以下二维码），关注后以留言方式向我们提问。 <a href="http://www.ilester.net/wp-content/uploads/2016/04/qrcode_for_gh_183840cb2661_258.jpg" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/04/qrcode_for_gh_183840cb2661_258.jpg" alt="Mlearning QR Code"></a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2016/04/ict-project-introduction/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lester Ruan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="信息技术教育应用">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/04/ict-project-introduction/" itemprop="url">扬起“提升”风帆,助力教师专业化发展</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-22T17:45:23+08:00">
-                2016-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/新闻动态/" itemprop="url" rel="index">
-                    <span itemprop="name">新闻动态</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>工作室阮高峰博士受《中国信息技术教育》杂志社邀请，参与该杂志2015年第17期“全国中小学教师信息技术应用能力提升工程”专题策划，并为该期刊物撰写卷首语。 转载如下：</p>
-<p>有一个流传甚广以至于有点老套的类比，说的是假设存在时间隧道，100多年前的医生穿越到今天的手术室，他们很难想象得出这是在医院，而一位100多年前的教师置身于今天的教室，八成还推断得出那是在学校。</p>
-<p>因为当代科技的限制，我们也无法对此进行验证，但环顾今天的学校，我们实际上也不难看出在信息技术高度普及的今天，教室中的一切相形之下还在延续着一样的师生授受，如果非要说什么变化，也许就是演示文稿将大多数老师从黑板板书中解放了出来。</p>
-<p>今天，信息技术已经证明了它在各个领域的变革力量，我们也应有理由对它的教育应用潜力抱有信心。要让信息技术扬起教育创新的风暴，教师无疑应该成为这场变革的核心。过去数年间，我国也已经建立起了中小学教师专业发展培训的制度框架与实施体系。在这一背景下，2013年教育部启动了“全国中小学教师信息技术应用能力提升工程”，希望借助在过去几年已经建立的教师专业发展培训制度，对全国中小学教师进行一轮以信息技术教育应用能力内容的全员专项培训，推动信息技术引领教师进行教学创新，引导学生学习方式的变革，掀起教室、学校中的信息技术应用浪潮。 教育部在“提升工程”重视和推进力度上几乎可以说是前所未有：在2013年底起至今教育部已经颁布有关工程部署的十余个文件；研制了专门指导工程实施的中小学教师信息技术应用能力标准、培训课程标准和测评方案；也借助各级教师培训项目提供了经费支持。</p>
-<p>应当说，“提升工程”的实施与推进、信息技术教育应用的实践与推进，正在形成我国教育史上最好的实施条件与外部环境。当然，对于信息技术教育应用的推进与深入而言，“提升工程”只会是起点，借助工程推进，营造应用氛围，给予中小学教师腾飞的翅膀，引燃创意的火花，方可星火燎原。 希望有一天我们再回看学校时，会看到教室里发生了像微信代替了书信、导航仪代替了地图、手机代替了钱包的变革，甚至于当老师们离开了信息技术像今天的人们失去WIFI信号一样总感觉生活缺了些什么一样。</p>
-<p><a href="http://www.ilester.net/wp-content/uploads/2016/04/NETT201517.jpg" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/04/NETT201517.jpg" alt="NET201517_Cover"></a></p>
-<p>原文： <a href="http://www.ilester.net/ict_project_introduction/%e6%89%ac%e8%b5%b7_%e6%8f%90%e5%8d%87_%e9%a3%8e%e5%b8%86_%e5%8a%a9%e5%8a%9b%e6%95%99%e5%b8%88%e4%b8%93%e4%b8%9a%e5%8c%96%e5%8f%91%e5%b1%95/" target="_blank" rel="noopener">扬起_提升_风帆_助力教师专业化发展.pdf</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2016/04/moodle-file-upload-setting/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lester Ruan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="信息技术教育应用">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/04/moodle-file-upload-setting/" itemprop="url">Q&A:Moodle中如何突破文件上传限制？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-22T09:42:21+08:00">
-                2016-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/工作室动态/" itemprop="url" rel="index">
-                    <span itemprop="name">工作室动态</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="问："><a href="#问：" class="headerlink" title="问："></a>问：</h3><p>网友hgtang:”阮老师，在用Moodle时为什么我已经设置服务器的上传限制了（修改PHP.ini文件），但是布置文件提交作业时，上传限制最大只有1M？百度了一晚上，整个人都不好了。。反正没有解决。”</p>
-<h3 id="答"><a href="#答" class="headerlink" title="答"></a>答</h3><p>Moodle是用PHP语言开发的一套开源学习管理系统，所以它的文件上传受到两个条件的限制，一是服务器环境中的文件上传限制，这在PHP.ini中限定；其次是Moodle系统中的环境配置，与文件上传相关的配置分别有全局级（面向整个系统）、课程级（面向所在课程）以及活动级（仅限向涉及文件上传的具体活动，例如作业）的配置。这几者的限制条件是：</p>
-<blockquote>
-<p>服务器环境&gt;Moodle全局配置&gt;课程级配置&gt;活动级配置。（也就是说，后面的配置值不应高于前面的配置值）</p>
-</blockquote>
-<p>以下依次说明配置的方法：</p>
-<h4 id="1、服务器环境配置："><a href="#1、服务器环境配置：" class="headerlink" title="1、服务器环境配置："></a>1、服务器环境配置：</h4><p>用文字编辑工具打开PHP.ini，与上传相关的配置选项包括upload_max_filesize（默认为2M）、post_max_size（默认为8M），注意post_max_size的选项值不应该小于upload_max_filesize，否则文件上传时递交的post数据和文件大小为0。我通常时将这两者设为一个比较大的值，另外，建议这两个值最好小于PHP环境运行内存上限值，即memory_limit。例如：</p>
-<blockquote>
-<p>upload_max_filesize=200M post_max_size=200M</p>
-</blockquote>
-<h4 id="2、全局设置"><a href="#2、全局设置" class="headerlink" title="2、全局设置"></a>2、全局设置</h4><p>用管理员帐户登录Moodle系统，在“网站管理”/“安全”/“网站策略”下，找到“上传文件大小的最大值”，选择一个合适的值，这里值的上限是服务器环境中的配置值。 <a href="http://www.ilester.net/wp-content/uploads/2016/04/system.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/04/system-1024x179.png" alt="Moodle Global Upload Setting"></a> 另外，一些涉及文件上传功能的模板往往也有相关的全局设定，这就需要自己分别去查找并更改了，以“作业”为例，可以在“网站管理”/“插件”/“活动模块”/“作业”/“文件提交”（曲径幽深呀）中找到“最大提交大小”这一选项，进行修改就可以了。</p>
-<h4 id="3、课程级设置"><a href="#3、课程级设置" class="headerlink" title="3、课程级设置"></a>3、课程级设置</h4><p>首先，建议管理员针对服务器的配额，给每个课程设置一个缺省的上传限制，这样以后每次新建的课程都会沿用这一配置，方法是进入“网站管理”/“课程”/“课程缺省设置”，在设置页面中找到“文件上传”，设置“最大上传文件”的值，这一值受到全局设置值的限制。 <a href="http://www.ilester.net/wp-content/uploads/2016/04/Moodle_Default_CourseUpload.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/04/Moodle_Default_CourseUpload-300x60.png" alt="Moodle default course upload setting"></a> 如果你的课程已经创建，那么也可以由具有权限的帐号，在课程设置中来调整这一选项。方法是先进入课程，然后单击“课程管理”/“更改设置”，在设置页面中找到“文件上传”，设置是否允许文件上传以及最大文件上传限制。 <a href="http://www.ilester.net/wp-content/uploads/2016/04/Moodle_SingleCourse_uploadSetting.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/04/Moodle_SingleCourse_uploadSetting-300x207.png" alt="Moodle Single Course upload setting"></a></p>
-<h4 id="4、活动级"><a href="#4、活动级" class="headerlink" title="4、活动级"></a>4、活动级</h4><p>另外，在上述各个配置值的限制下，也可以针对具体活动进行上传文件的限制，可以由具有编辑权限的帐户（例如课程的教师角色）登录后，编辑此项活动的设置，在相应的选项中进行操作，以“作业”为例，是在“作业类型”选项卡下操作，如图。 <a href="http://www.ilester.net/wp-content/uploads/2016/04/Moodle_Activity_upload_setting.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/04/Moodle_Activity_upload_setting-300x203.png" alt="Moodle Single Activity Upload Setting"></a></p>
-<hr>
-<p>问答是我们自2016年起开设的新栏目，如果您有教育信息化应用方面的疑惑与问题，欢迎递交。我们会协调我们的专家网络，尽力给您解答。咨询方式：</p>
-<ul>
-<li>电子邮件：<a href="mailto:limx@ilester.net" target="_blank" rel="noopener">limx@ilester.net</a> （李同学）</li>
-<li>新浪微博：请用<a href="http://weibo.com/zjlester" target="_blank" rel="noopener">@iLester</a> 或 <a href="http://weibo.com/TechStar?is_all=1" target="_blank" rel="noopener">@ICT教育应用</a> 向我们提问（恕不接受私信咨询，请谅解）。</li>
-<li>微信公众号：您可以查找搜索以下微信公众号：mlearning（或扫描以下二维码），关注后以留言方式向我们提问。 <a href="http://www.ilester.net/wp-content/uploads/2016/04/qrcode_for_gh_183840cb2661_258.jpg" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2016/04/qrcode_for_gh_183840cb2661_258.jpg" alt="Mlearning QR Code"></a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1927,7 +1889,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">181</span>
+                  <span class="site-state-item-count">184</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1938,7 +1900,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -1949,7 +1911,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">109</span>
+                  <span class="site-state-item-count">110</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
