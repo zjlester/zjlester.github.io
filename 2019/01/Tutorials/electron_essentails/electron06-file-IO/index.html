@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Electron,">
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="推介优秀教育软件与资源，分享技术应用技法">
-<meta name="keywords" content="信息技术,教育技术学,移动学习,信息化教学,智慧教育">
-<meta property="og:type" content="website">
-<meta property="og:title" content="信息技术教育应用">
-<meta property="og:url" content="http://zjlester.github.io/tags/信息技术应用能力提升/index.html">
+<meta name="description" content="文件处理是桌面应用构建非常重要的一个部分，几乎所有的桌面程序都会涉及文件操作。在这个案例中我们将创建一个表单来接受用户输入信息——姓名和电子邮件地址，表单的内容将会存储到文件中，并显示在列表中作为输出信息。 首先，在main.js文件中输入以下代码来创建一个主进程：1234567const &amp;#123;app, BrowserWindow&amp;#125; = require(&amp;apos;electro">
+<meta name="keywords" content="Electron">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electron教程翻译6：文件处理">
+<meta property="og:url" content="http://zjlester.github.io/2019/01/Tutorials/electron_essentails/electron06-file-IO/index.html">
 <meta property="og:site_name" content="信息技术教育应用">
-<meta property="og:description" content="推介优秀教育软件与资源，分享技术应用技法">
+<meta property="og:description" content="文件处理是桌面应用构建非常重要的一个部分，几乎所有的桌面程序都会涉及文件操作。在这个案例中我们将创建一个表单来接受用户输入信息——姓名和电子邮件地址，表单的内容将会存储到文件中，并显示在列表中作为输出信息。 首先，在main.js文件中输入以下代码来创建一个主进程：1234567const &amp;#123;app, BrowserWindow&amp;#125; = require(&amp;apos;electro">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yun.zjer.cn/uploads2/post/2018/12/11/1544501488966291.jpg">
+<meta property="og:updated_time" content="2019-01-06T02:12:08.186Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="信息技术教育应用">
-<meta name="twitter:description" content="推介优秀教育软件与资源，分享技术应用技法">
+<meta name="twitter:title" content="Electron教程翻译6：文件处理">
+<meta name="twitter:description" content="文件处理是桌面应用构建非常重要的一个部分，几乎所有的桌面程序都会涉及文件操作。在这个案例中我们将创建一个表单来接受用户输入信息——姓名和电子邮件地址，表单的内容将会存储到文件中，并显示在列表中作为输出信息。 首先，在main.js文件中输入以下代码来创建一个主进程：1234567const &amp;#123;app, BrowserWindow&amp;#125; = require(&amp;apos;electro">
+<meta name="twitter:image" content="http://yun.zjer.cn/uploads2/post/2018/12/11/1544501488966291.jpg">
 
 
 
@@ -99,7 +102,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://zjlester.github.io/tags/信息技术应用能力提升/">
+  <link rel="canonical" href="http://zjlester.github.io/2019/01/Tutorials/electron_essentails/electron06-file-IO/">
 
 
 
 
 
-  <title>标签: 信息技术应用能力提升 | 信息技术教育应用</title>
+  <title>Electron教程翻译6：文件处理 | 信息技术教育应用</title>
   
 
 
@@ -144,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -270,52 +273,234 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>信息技术应用能力提升<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2019/01/Tutorials/electron_essentails/electron06-file-IO/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lester Ruan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="信息技术教育应用">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2015/10/ict-development-01/" itemprop="url">
-              
-                <span itemprop="name">ICTPD01:开辟专栏“提升工程学思行”</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Electron教程翻译6：文件处理</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2015-10-26T20:27:34+08:00" content="2015-10-26">
-          10-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-06T10:09:51+08:00">
+                2019-01-06
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/电子教程/" itemprop="url" rel="index">
+                    <span itemprop="name">电子教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>文件处理是桌面应用构建非常重要的一个部分，几乎所有的桌面程序都会涉及文件操作。在这个案例中我们将创建一个表单来接受用户输入信息——姓名和电子邮件地址，表单的内容将会存储到文件中，并显示在列表中作为输出信息。</p>
+<p>首先，在main.js文件中输入以下代码来创建一个主进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const &#123;app, BrowserWindow&#125; = require(&apos;electron&apos;)const url = require(&apos;url&apos;)const path = require(&apos;path&apos;)let winfunction createWindow() &#123;</span><br><span class="line">   win = new BrowserWindow(&#123;width: 800, height: 600&#125;)</span><br><span class="line">   win.loadURL(url.format (&#123;</span><br><span class="line">      pathname: path.join(__dirname, &apos;index.html&apos;),</span><br><span class="line">      protocol: &apos;file:&apos;,</span><br><span class="line">      slashes: true</span><br><span class="line">   &#125;))&#125;app.on(&apos;ready&apos;, createWindow)</span><br></pre></td></tr></table></figure></p>
+<p>现在打开index.html，并输入以下代码：<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;&lt;html&gt;</span><br><span class="line">   &lt;head&gt;</span><br><span class="line">      &lt;meta charset = &quot;UTF-8&quot;&gt;</span><br><span class="line">      &lt;title&gt;File System&lt;/title&gt;</span><br><span class="line">      &lt;link rel = &quot;stylesheet&quot; </span><br><span class="line">         href = &quot;./bower_components/bootstrap/dist/css/bootstrap.min.css&quot; /&gt;</span><br><span class="line">      </span><br><span class="line">      &lt;style type = &quot;text/css&quot;&gt;</span><br><span class="line">         #contact-list &#123;</span><br><span class="line">            height: 150px;</span><br><span class="line">            overflow-y: auto;</span><br><span class="line">         &#125;</span><br><span class="line">      &lt;/style&gt;</span><br><span class="line">   &lt;/head&gt;</span><br><span class="line">   </span><br><span class="line">   &lt;body&gt;</span><br><span class="line">      &lt;div class = &quot;container&quot;&gt;</span><br><span class="line">         &lt;h1&gt;Enter Names and Email addresses of your contacts&lt;/h1&gt;</span><br><span class="line">         &lt;div class = &quot;form-group&quot;&gt;</span><br><span class="line">            &lt;label for = &quot;Name&quot;&gt;Name&lt;/label&gt;</span><br><span class="line">            &lt;input type = &quot;text&quot; name = &quot;Name&quot; value = &quot;&quot; id = &quot;Name&quot; </span><br><span class="line">               placeholder = &quot;Name&quot; class = &quot;form-control&quot; required&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">         </span><br><span class="line">         &lt;div class = &quot;form-group&quot;&gt;</span><br><span class="line">            &lt;label for = &quot;Email&quot;&gt;Email&lt;/label&gt;</span><br><span class="line">            &lt;input type = &quot;email&quot; name = &quot;Email&quot; value = &quot;&quot; id = &quot;Email&quot; </span><br><span class="line">               placeholder = &quot;Email&quot; class = &quot;form-control&quot; required&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">         </span><br><span class="line">         &lt;div class = &quot;form-group&quot;&gt;</span><br><span class="line">            &lt;button class = &quot;btn btn-primary&quot; id = &quot;add-to-list&quot;&gt;Add to list!&lt;/button&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">         </span><br><span class="line">         &lt;div id = &quot;contact-list&quot;&gt;</span><br><span class="line">            &lt;table class = &quot;table-striped&quot; id = &quot;contact-table&quot;&gt;</span><br><span class="line">               &lt;tr&gt;</span><br><span class="line">                  &lt;th class = &quot;col-xs-2&quot;&gt;S. No.&lt;/th&gt;</span><br><span class="line">                  &lt;th class = &quot;col-xs-4&quot;&gt;Name&lt;/th&gt;</span><br><span class="line">                  &lt;th class = &quot;col-xs-6&quot;&gt;Email&lt;/th&gt;</span><br><span class="line">               &lt;/tr&gt;</span><br><span class="line">            &lt;/table&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">         </span><br><span class="line">         &lt;script src = &quot;./view.js&quot; &gt;&lt;/script&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">   &lt;/body&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>现在我们在view.js文件来处理这一额外的事件。首先创建一个loadAndDisplayContacts()函，用它来读取文件中的初始联系人信息。创建loadAndDisplayContacts()函数之后，我们将创建一个点击事件处理函数到“add to list”按钮，以此作为文件和表格处理的入口。要做的就是在view.js文件中，输入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">let $ = require(&apos;jquery&apos;)let fs = require(&apos;fs&apos;)let filename = &apos;contacts&apos;let sno = 0$(&apos;#add-to-list&apos;).on(&apos;click&apos;, () =&gt; &#123;</span><br><span class="line">   let name = $(&apos;#Name&apos;).val()</span><br><span class="line">   let email = $(&apos;#Email&apos;).val()</span><br><span class="line"></span><br><span class="line">   fs.appendFile(&apos;contacts&apos;, name + &apos;,&apos; + email + &apos;n&apos;)</span><br><span class="line"></span><br><span class="line">   addEntry(name, email)&#125;)function addEntry(name, email) &#123;</span><br><span class="line">   if(name &amp;&amp; email) &#123;</span><br><span class="line">      sno++</span><br><span class="line">      let updateString = &apos;&lt;tr&gt;&lt;td&gt;&apos;+ sno + &apos;&lt;/td&gt;&lt;td&gt;&apos;+ name +&apos;&lt;/td&gt;&lt;td&gt;&apos; </span><br><span class="line">         + email +&apos;&lt;/td&gt;&lt;/tr&gt;&apos;</span><br><span class="line">      $(&apos;#contact-table&apos;).append(updateString)</span><br><span class="line">   &#125;&#125;function loadAndDisplayContacts() &#123;  </span><br><span class="line">   </span><br><span class="line">   //Check if file exists</span><br><span class="line">   if(fs.existsSync(filename)) &#123;</span><br><span class="line">      let data = fs.readFileSync(filename, &apos;utf8&apos;).split(&apos;n&apos;)</span><br><span class="line">      </span><br><span class="line">      data.forEach((contact, index) =&gt; &#123;</span><br><span class="line">         let [ name, email ] = contact.split(&apos;,&apos;)</span><br><span class="line">         addEntry(name, email)</span><br><span class="line">      &#125;)</span><br><span class="line">   </span><br><span class="line">   &#125; else &#123;</span><br><span class="line">      console.log(&quot;File Doesn&apos;t Exist. Creating new file.&quot;)</span><br><span class="line">      fs.writeFile(filename, &apos;&apos;, (err) =&gt; &#123;</span><br><span class="line">         if(err)</span><br><span class="line">            console.log(err)</span><br><span class="line">      &#125;)</span><br><span class="line">   &#125;&#125;loadAndDisplayContacts()</span><br></pre></td></tr></table></figure></p>
+<p>现在使用以下命令来运行此程序：<code>$ electron ./main.js</code>。</p>
+<p>当你添加一些联系人之后，这个程序看上去应该如下图所示：</p>
+<p><img src="http://yun.zjer.cn/uploads2/post/2018/12/11/1544501488966291.jpg" alt="运行效果"></p>
+<p>如果要了解更多的fs模块的API调用，可以查询Node文件系统的教程（<a href="https://www.tutorialspoint.com/nodejs/nodejs_file_system.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/nodejs/nodejs_file_system.htm</a>  ）。现在你可以用Electron来处理文件了，在后面的内容中，我们将会介绍如何用文件对话框（原生）来打开和保存文件。</p>
+<p>原文：<a href="https://www.tutorialspoint.com/electron/electron_file_handling.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/electron/electron_file_handling.htm</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Lester Ruan
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://zjlester.github.io/2019/01/Tutorials/electron_essentails/electron06-file-IO/" title="Electron教程翻译6：文件处理">http://zjlester.github.io/2019/01/Tutorials/electron_essentails/electron06-file-IO/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Electron/" rel="tag"># Electron</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/Tutorials/electron_essentails/electron05-UI/" rel="next" title="Electron教程翻译5：创建UI">
+                <i class="fa fa-chevron-left"></i> Electron教程翻译5：创建UI
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -323,6 +508,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -338,6 +527,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -347,6 +538,8 @@
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Lester Ruan">
             
               <p class="site-author-name" itemprop="name">Lester Ruan</p>
               <p class="site-description motion-element" itemprop="description">推介优秀教育软件与资源，分享技术应用技法</p>
@@ -359,7 +552,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">174</span>
+                  <span class="site-state-item-count">173</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -381,7 +574,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">107</span>
+                  <span class="site-state-item-count">104</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -392,8 +585,42 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="service@ilester.net" target="_blank" title="E-mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/zjlester/" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-modx"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/zjlester" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://gzs.ilester.net" target="_blank" title="工作室">
+                      
+                        <i class="fa fa-fw fa-learnpub"></i>工作室</a>
+                  </span>
+                
+            </div>
+          
 
           
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
           
 
           
@@ -537,6 +764,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
