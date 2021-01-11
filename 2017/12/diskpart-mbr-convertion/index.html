@@ -17,14 +17,14 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zjlester.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"www.ilester.net","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="前段时间电脑上磁盘吃紧，所以紧急购置了两个4T的硬盘，挂上之后在Windows的磁盘管理中初始化时，习惯性地将它创建为了MBR分区，然后问题就出现了——因为MBR最高只能认到2T的空间，因为磁盘是空的，所以打算直接将它转换为GPT。 本来打算用可视化工具的方式来操作，后来发现还是用命令行工具diskpart来操作比较省事。以下是操作方法。 首先在命令提示符中输入diskpart，加载此命令。或者在">
 <meta name="keywords" content="Windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Diskpart命令快速将硬盘转换为GPT分区">
-<meta property="og:url" content="http://zjlester.github.io/2017/12/diskpart-mbr-convertion/index.html">
+<meta property="og:url" content="http://www.ilester.net/2017/12/diskpart-mbr-convertion/index.html">
 <meta property="og:site_name" content="信息技术教育应用">
 <meta property="og:description" content="前段时间电脑上磁盘吃紧，所以紧急购置了两个4T的硬盘，挂上之后在Windows的磁盘管理中初始化时，习惯性地将它创建为了MBR分区，然后问题就出现了——因为MBR最高只能认到2T的空间，因为磁盘是空的，所以打算直接将它转换为GPT。 本来打算用可视化工具的方式来操作，后来发现还是用命令行工具diskpart来操作比较省事。以下是操作方法。 首先在命令提示符中输入diskpart，加载此命令。或者在">
 <meta property="og:locale" content="zh-Hans">
@@ -35,7 +35,7 @@
 <meta name="twitter:description" content="前段时间电脑上磁盘吃紧，所以紧急购置了两个4T的硬盘，挂上之后在Windows的磁盘管理中初始化时，习惯性地将它创建为了MBR分区，然后问题就出现了——因为MBR最高只能认到2T的空间，因为磁盘是空的，所以打算直接将它转换为GPT。 本来打算用可视化工具的方式来操作，后来发现还是用命令行工具diskpart来操作比较省事。以下是操作方法。 首先在命令提示符中输入diskpart，加载此命令。或者在">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/32597-9d46332dbab50497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/693">
 
-<link rel="canonical" href="http://zjlester.github.io/2017/12/diskpart-mbr-convertion/">
+<link rel="canonical" href="http://www.ilester.net/2017/12/diskpart-mbr-convertion/">
 
 
 <script id="page-configurations">
@@ -154,7 +154,7 @@
   
   
   <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2017/12/diskpart-mbr-convertion/">
+    <link itemprop="mainEntityOfPage" href="http://www.ilester.net/2017/12/diskpart-mbr-convertion/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">

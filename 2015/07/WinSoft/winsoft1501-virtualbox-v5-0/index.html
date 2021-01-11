@@ -17,14 +17,14 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"zjlester.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"www.ilester.net","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="VirtualBox是一款开源的虚拟机软件，简单地说它可以在物理计算机中（Host）划出一部分的运算资源，虚拟出一台“计算机”（Guest），在Guest计算机上安装上相应的操作系统之后，可以像正常的物理计算机一样使用。比如：你可以在Windows 7环境里安装VirtualBox，然后分配几个Guest计算机器，分别安装上Ubuntu、Windows XP等不同的操作系统，只要你的物理计算机足够">
 <meta name="keywords" content="VirtualBox,虚拟机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Win008: 虚拟机软件VirtualBox V5.0">
-<meta property="og:url" content="http://zjlester.github.io/2015/07/WinSoft/winsoft1501-virtualbox-v5-0/index.html">
+<meta property="og:url" content="http://www.ilester.net/2015/07/WinSoft/winsoft1501-virtualbox-v5-0/index.html">
 <meta property="og:site_name" content="信息技术教育应用">
 <meta property="og:description" content="VirtualBox是一款开源的虚拟机软件，简单地说它可以在物理计算机中（Host）划出一部分的运算资源，虚拟出一台“计算机”（Guest），在Guest计算机上安装上相应的操作系统之后，可以像正常的物理计算机一样使用。比如：你可以在Windows 7环境里安装VirtualBox，然后分配几个Guest计算机器，分别安装上Ubuntu、Windows XP等不同的操作系统，只要你的物理计算机足够">
 <meta property="og:locale" content="zh-Hans">
@@ -35,7 +35,7 @@
 <meta name="twitter:description" content="VirtualBox是一款开源的虚拟机软件，简单地说它可以在物理计算机中（Host）划出一部分的运算资源，虚拟出一台“计算机”（Guest），在Guest计算机上安装上相应的操作系统之后，可以像正常的物理计算机一样使用。比如：你可以在Windows 7环境里安装VirtualBox，然后分配几个Guest计算机器，分别安装上Ubuntu、Windows XP等不同的操作系统，只要你的物理计算机足够">
 <meta name="twitter:image" content="http://www.ilester.net/wp-content/uploads/2015/07/tm_Fedora_21_on_OSX.png">
 
-<link rel="canonical" href="http://zjlester.github.io/2015/07/WinSoft/winsoft1501-virtualbox-v5-0/">
+<link rel="canonical" href="http://www.ilester.net/2015/07/WinSoft/winsoft1501-virtualbox-v5-0/">
 
 
 <script id="page-configurations">
@@ -154,7 +154,7 @@
   
   
   <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://zjlester.github.io/2015/07/WinSoft/winsoft1501-virtualbox-v5-0/">
+    <link itemprop="mainEntityOfPage" href="http://www.ilester.net/2015/07/WinSoft/winsoft1501-virtualbox-v5-0/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -207,7 +207,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>VirtualBox是一款开源的虚拟机软件，简单地说它可以在物理计算机中（Host）划出一部分的运算资源，虚拟出一台“计算机”（Guest），在Guest计算机上安装上相应的操作系统之后，可以像正常的物理计算机一样使用。比如：你可以在Windows 7环境里安装VirtualBox，然后分配几个Guest计算机器，分别安装上Ubuntu、Windows XP等不同的操作系统，只要你的物理计算机足够强大，分配多个Guest计算机也是完全可以的。 <a href="http://www.ilester.net/wp-content/uploads/2015/07/tm_Fedora_21_on_OSX.png" target="_blank" rel="noopener"><img src="http://www.ilester.net/wp-content/uploads/2015/07/tm_Fedora_21_on_OSX.png" alt="tm_Fedora_21_on_OSX"></a></p>
+        <p>VirtualBox是一款开源的虚拟机软件，简单地说它可以在物理计算机中（Host）划出一部分的运算资源，虚拟出一台“计算机”（Guest），在Guest计算机上安装上相应的操作系统之后，可以像正常的物理计算机一样使用。比如：你可以在Windows 7环境里安装VirtualBox，然后分配几个Guest计算机器，分别安装上Ubuntu、Windows XP等不同的操作系统，只要你的物理计算机足够强大，分配多个Guest计算机也是完全可以的。 <a href="http://www.ilester.net/wp-content/uploads/2015/07/tm_Fedora_21_on_OSX.png"><img src="http://www.ilester.net/wp-content/uploads/2015/07/tm_Fedora_21_on_OSX.png" alt="tm_Fedora_21_on_OSX"></a></p>
 <h3 id="主要应用领域"><a href="#主要应用领域" class="headerlink" title="主要应用领域"></a>主要应用领域</h3><ul>
 <li>学习操作系统：比如你想了解一款新的操作系统的使用，比如学习Ubuntu，但又担心在物理机上安装会不慎损坏磁盘分区，丢失文件（很多学Linux系统的同学都经历过这一遭），但如果你用虚拟机，就完全没有这个危险，因为Guest机的搞什么不会影响Host</li>
 <li>进行网络实验：比如要学习Windows AD的操作配置，我们就需要AD控制器、普通计算机等不同的角色，也就是说你至少需要两台计算机才可以实现，这个时候，如果使用虚拟机的话就可以在一台计算机上实现了。</li>
