@@ -7,35 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>基础教育类名师工作站证书查询</title>
     <style>
+        .wrapper {
+            margin-top: 150px;
+        }
+
         h1 {
             text-align: center;
         }
 
         .box {
+
             width: 600px;
             height: 50%;
-            margin: auto auto;
+            margin: 50px auto;
             padding: 40px;
             border: 4px solid #ccc;
             border-radius: 10px;
-            line-height: 2;
+            line-height: 3;
             text-align: center;
+            font-size: 1.4em;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>基础教育类名师工作站证书查询</h1>
-    <div class="box">
-        <form action="javascript:check();">
-            <label for="cert_num">证书编号：</label>
-            <input type="text" id="cert_num" name="cert_num" placeholder="请输入证书编号">
-            <br>
-            <input type="submit" value="提交" id="submit">
-            <button type="reset">重置</button>
-        </form>
+    <div class="wrapper">
+        <h1>基础教育类名师工作站证书查询</h1>
+        <div class="box">
+            <form action="javascript:check();">
+                <label for="cert_num">证书编号：</label>
+                <input type="text" id="cert_num" name="cert_num" placeholder="请输入证书编号">
+                <br>
+                <button type="submit" id="submit">提交</button>
+                <button type="reset">重置</button>
+            </form>
 
+        </div>
     </div>
+
 
     <script>
         function check() {
