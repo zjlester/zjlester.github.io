@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础教育类名师工作站2022上送教证书查询</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            height: 50%;
+            margin: auto auto;
+            padding: 40px;
+            border: 4px solid #ccc;
+            border-radius: 10px;
+            line-height: 2;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>简易查询</h1>
+    <div class="box">
+        <form action="javascript:check();">
+            <label for="cert_num">证书编号：</label>
+            <input type="text" id="cert_num" name="cert_num" placeholder="请输入证书编号">
+            <br>
+            <input type="submit" value="提交" id="submit">
+            <button type="reset">重置</button>
+        </form>
+
+    </div>
+
+    <script>
+        function check() {
+            var btnSubmit = document.querySelector('#submit');
+            var txtCertNum = document.querySelector('#cert_num');
+            var url = txtCertNum.value.trim();
+            // a标签的href可以取得当前文件所在目录的绝对路径
+            var a = document.createElement('a');
+            a.href = './';
+            url = a.href + 'images/' + url + '.png';
+            a = null;
+            location.href = url;
+        }
+
+
+    </script>
+</body>
+
+
+</html>
